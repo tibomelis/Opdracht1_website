@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('./../fonts/Raleway-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Open-Sans-Thin';
+    src: url('./../fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Open-Sans-Bold';
+    src: url('./../fonts/OpenSans-Bold.ttf');
+}
+
+:root {
+    --gray: #F6F6F6;
+    --lightgray: #f1f1f1;
+    --blue: #00B5E8;
+    --lightblue: #00c8ff;
+    --font-header: 'Raleway';
+    --font-default: 'Open-Sans-Thin';
+    --font-bold: 'Open-Sans-Bold';
+}
+
+body {
+    font-family: var(--font-default);
+    display: grid;
+    margin: 0 100px;
+    grid-template-rows: repeat(3, auto);
+}
+/* TOP PART */
+header {
+    display: flex;
+    margin: 100px 100px 0 100px;
+    height: 100px;
+    align-self: flex-start;
+    z-index: 1;
+    padding: 0 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    align-self: flex-end;
+}
+
+header > .lorem-logo {
+    left: 25px;
+    height: 200px;
+    width: 200px;
+    border: 2px solid var(--lightgray);
+}
+
+
+/* Menu underline */
+.menu-item {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 0;
+    font-family: var(--font-header);
+}
+
+.menu-item:hover {
+    color: var(--blue);
+    border-bottom: 3px solid;
+}
+
+.menu-item.selected {
+    color: var(--blue);
+    border-bottom: 3px solid;
+}
+
+/* main */
+main {
+    padding: 50px;
+    padding-bottom: 100px;
+    margin: 0 100px;
+    background-color: var(--gray);
+    z-index: 0;
+}
+
+.bold {
+    font-family: var(--font-bold);
+}
+
+.image {
+    display: block;
+    width: 30vw;
+    height: auto;
+}
+
+.overlay {
+    top: -100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 30vw;
+    opacity: 0;
+    transform: translate(0, -100%);
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.container {
+    height: min-content;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+}
+
+.images > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.images > div > div {
+    margin: 0 5px;
+}
+
+.padding-right
+{
+    padding-right: 35%;
+}
+
+.doe-de-test {
+    color: red;
+}
+
+.article-2 {
+    display: flex;
+}
+
+footer {
+    height: 60px;
+    display: flex;
+    margin: 0 100px 100px 100px;
+    z-index: 50;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.footer-links > div > a, .footer-link {
+    color: black;
+    text-decoration: none;
+}
+
+footer > div > .lorem-logo {
+    left: 25px;
+    height: 150px;
+    width: 150px;
+    border: 2px solid var(--lightgray);
+}
+footer > div:first-child {
+    display: flex;
+    align-items: flex-end;
+}
+footer > div:last-child {
+    display: flex;
+    align-items: center;
+}
+
+footer > div:last-child > * {
+    padding: 0 10px;
+}
+
+.more-projects
+{
+    display: flex;
+    color: white;
+    font-family: var(--font-bold);
+    text-decoration: none;
+    justify-content: center;
+}
+.more-projects > div {
+    width: fit-content;
+    padding: 10px;
+    background-color: var(--blue);
+}
+
+.more-projects > div:hover {
+    background-color: #4bd8ff;
+    color: var(--lightgray);
+}
