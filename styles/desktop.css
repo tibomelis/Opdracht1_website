@@ -47,7 +47,10 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
+#mobile-menu-btn
+{
+    display: none;
+}
 nav {
     display: flex;
     align-self: flex-end;
