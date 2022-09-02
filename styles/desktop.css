@@ -228,6 +228,10 @@ footer > div:last-child > * {
     justify-content: center;
 }
 
+.lang-sel-item {
+    padding-left: 1vw;
+}
+
 .lang-sel-item > a{
     text-decoration: none;
     color: black;
