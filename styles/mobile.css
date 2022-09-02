@@ -1,0 +1,204 @@
+/* 
+    Auteur:         Tibo Melis
+    Omschrijving:   Een opdracht van MaxServ
+    Datum:          9/1/2022  
+    Bestand:        Styling voor de website op mobiel
+*/
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('./../fonts/Raleway-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Open-Sans-Thin';
+    src: url('./../fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Open-Sans-Bold';
+    src: url('./../fonts/OpenSans-Bold.ttf');
+}
+
+:root {
+    --gray: #F6F6F6;
+    --lightgray: #f1f1f1;
+    --blue: #00B5E8;
+    --lightblue: #00c8ff;
+    --font-header: 'Raleway';
+    --font-default: 'Open-Sans-Thin';
+    --font-bold: 'Open-Sans-Bold';
+}
+
+* {
+    padding: 1vw;
+}
+
+body {
+    font-family: var(--font-default);
+    grid-template-rows: repeat(3, auto);
+}
+/* TOP PART */
+header {
+    display: flex;
+    height: 4vw;
+    align-self: flex-start;
+    z-index: 1;
+    margin: 2vw;
+    margin-bottom: 0;
+    align-items: flex-end;
+}
+
+nav {
+    display: flex;
+    align-self: flex-end;
+}
+
+header > .lorem-logo {
+    left: 1vw;
+    height: 10vw;
+    width: 10vw;
+    border: 1px solid var(--lightgray);
+    padding: 0;
+}
+
+/* Menu underline */
+.menu-item {
+    color: black;
+    text-decoration: none;
+    font-family: var(--font-header);
+    margin: 0 1vw 0 0;
+}
+
+.menu-item.selected {
+    color: var(--blue);
+    border-bottom: 1px solid var(--blue);
+}
+
+/* main */
+main {
+    background-color: var(--gray);
+    z-index: 0;
+}
+
+.bold {
+    font-family: var(--font-bold);
+}
+
+.images
+{
+    display: flex;
+    justify-content: space-evenly;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.images > div {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.images .image {
+    transform: translate(155%, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.parent {
+    width: 30vw;
+    height: auto;
+    position: relative;
+}
+
+.image.overlay {
+    display: none;
+}
+
+.doe-de-test {
+    color: red;
+}
+
+.article-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    padding-top: 15vw;
+    height: 1vw;
+    display: flex;
+    z-index: 50;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.footer-links > div > a, .footer-link {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-links p {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+footer > div > .lorem-logo {
+    height: 8vw;
+    width: 8vw;
+    border: 1px solid var(--lightgray);
+    padding: 0;
+}
+footer > div:first-child {
+    display: flex;
+    align-items: flex-end;
+}
+footer > div:last-child {
+    display: flex;
+    align-items: center;
+}
+
+.more-projects
+{
+    display: flex;
+    color: white;
+    font-family: var(--font-bold);
+    text-decoration: none;
+    justify-content: center;
+}
+.more-projects > div {
+    width: fit-content;
+    background-color: var(--blue);
+}
+
+.lang-sel {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.lang-sel > div {
+    display: flex;
+    width: 1vw;
+    height: 1vw;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4vw;
+}
+
+.lang-sel-item > a{
+    text-decoration: none;
+    color: black;
+}
+
+.lang-sel-item.selected > a > p{
+    color: white;
+    background-color: var(--blue);
+    font-family: var(--font-bold);
+}
