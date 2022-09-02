@@ -1,3 +1,10 @@
+/* 
+    Auteur:         Tibo Melis
+    Omschrijving:   Een opdracht van MaxServ
+    Datum:          9/1/2022  
+    Bestand:        Styling voor de website
+*/
+
 @font-face {
     font-family: 'Raleway';
     src: url('./../fonts/Raleway-Regular.ttf');
@@ -197,4 +204,31 @@ footer > div:last-child > * {
 .more-projects > div:hover {
     background-color: #4bd8ff;
     color: var(--lightgray);
+}
+
+.lang-sel {
+    display: flex;
+    justify-content: flex-end;
+    margin: 25px 100px 0 100px;
+    padding: 0 25px;
+}
+
+.lang-sel > div {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-sel-item > a{
+    text-decoration: none;
+    color: black;
+}
+
+.lang-sel-item.selected > a > p{
+    color: white;
+    background-color: var(--blue);
+    padding: 2px;
+    font-family: var(--font-bold);
 }

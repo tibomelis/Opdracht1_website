@@ -1,14 +1,8 @@
-// for (let i = 0; i < 6; i++) {
-//     const img = document.createElement('img');
-//     const imagesdiv = document.querySelector('div.images');
+/*
+    Auteur:         Tibo Melis
+    Omschrijving:   Een opdracht van MaxServ
+    Datum:          9/1/2022    
+    Bestand:        (nog geen) javascript code voor de website
+*/
 
-//     img.src = './../images/image_template.png';
-
-//     img.style.width = '45%';
-//     img.style.height = 'auto';
-//     img.style.padding = '5px';
-//     img.style.zIndex = 3;
-//     img.addEventListener('mouseenter', makehoverimg);
-//     img.addEventListener('mouseleave', delhoverimg);
-//     imagesdiv.appendChild(img);
-// }
+// nog niks hier.
