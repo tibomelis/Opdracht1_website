@@ -225,10 +225,17 @@ footer > div:last-child > * {
     text-decoration: none;
     color: black;
 }
+.lang-sel-item > a > p:hover {
+    background-color: var(--lightblue) !important;
+    color: white !important;
+    border: 1px solid black;
+}
 
 .lang-sel-item.selected > a > p{
     color: white;
     background-color: var(--blue);
-    padding: 2px;
     font-family: var(--font-bold);
+}
+.lang-sel-item > a > p {
+    padding: 2px;
 }
