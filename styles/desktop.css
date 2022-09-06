@@ -32,35 +32,26 @@
 
 body {
     font-family: var(--font-default);
-    display: grid;
-    margin: 0 5vw;
     grid-template-rows: repeat(3, auto);
 }
 /* TOP PART */
 header {
-    display: flex;
     margin: 4vw 4vw 0 4vw;
     padding: 0 6vw;
     height: 4vw;
-    align-self: flex-start;
     z-index: 1;
     align-items: center;
     justify-content: space-between;
 }
-#mobile-menu-btn
+.mobile-menu-btn
 {
     display: none;
-}
-nav {
-    display: flex;
-    align-self: flex-end;
 }
 
 header > .lorem-logo {
     left: 1vw;
     height: 10vw;
     width: 10vw;
-    border: 2px solid var(--lightgray);
 }
 
 
@@ -159,7 +150,6 @@ footer {
     height: 5vw;
     display: flex;
     margin: 0 5vw 5vw 5vw;
-    z-index: 50;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -179,7 +169,6 @@ footer {
 footer > div > .lorem-logo {
     height: 8vw;
     width: 8vw;
-    border: 2px solid var(--lightgray);
 }
 footer > div:first-child {
     display: flex;
@@ -221,11 +210,9 @@ footer > div:last-child > * {
 }
 
 .lang-sel > div {
-    display: flex;
     width: 1vw;
     height: 1vw;
-    align-items: center;
-    justify-content: center;
+
 }
 
 .lang-sel-item {
@@ -239,7 +226,6 @@ footer > div:last-child > * {
 .lang-sel-item > a > p:hover {
     background-color: var(--lightblue) !important;
     color: white !important;
-    border: 1px solid black;
 }
 
 .lang-sel-item.selected > a > p{
@@ -261,4 +247,46 @@ h1 {
 
 p, a {
     font-size: 1vw;
+}
+
+.border.gray
+{
+    border: 1px solid var(--lightgray);
+}
+
+.border.black {
+    border: 1px solid black;
+}
+
+.grid
+{
+    display: grid;
+}
+
+.text.white
+{
+    color: white;
+}
+
+.text.black
+{
+    color: black;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex.start {
+    align-self: flex-start;
+}
+
+.flex.end {
+    align-self: flex-end;
+}
+
+.flex.centered
+{
+    align-items: center;
+    justify-content: center;
 }

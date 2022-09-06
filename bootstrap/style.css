@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('./../fonts/OpenSans-Light.ttf');
+}
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('./../fonts/OpenSans-Bold.ttf');
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./../fonts/Raleway-Regular.ttf');
+}
+
+:root
+{
+    --blue: #00B5E8;
+    --gray: #F6F6F6;
+    --font-header: 'Raleway';
+    --font-text: 'OpenSans-Light';
+    --font-text-bold: 'OpenSans-Bold';
+}
+
+body
+{
+    font-family: var(--font-text);
+}
+
+.bold
+{
+    font-family: var(--font-text-bold);
+}
+
+.header
+{
+    position: relative;
+    height: 150px;
+}
+
+.logo-top
+{
+    height: 25%;
+    width: auto;
+    transform: translate(0, 25%);
+}
+.logo-bottom
+{
+    height: 150%;
+    width: auto;
+    transform: translate(0, -25%);
+}
+
+.menu-link {
+    color: black;
+    font-family: var(--font-header);
+}
+
+.menu-link.selected, .menu-link:hover {
+    text-decoration: none;
+    color: var(--blue);
+    border-bottom: 3px solid var(--blue);
+}
+
+.lang-sel-item {
+    color: black;
+    width: 30px;
+    height: 30px;
+}
+
+.lang-sel-item.selected, .lang-sel-item:hover {
+    color: white;
+    background-color: var(--blue);
+    font-family: var(--font-text-bold);
+    text-decoration: none;
+}
+
+.footer-links a
+{
+    color: black;
+}
+
+.footer-links
+{
+    text-align: center;
+}
+
+.do-test-link, .do-test-link:hover
+{
+    color: #f00;
+}
+
+.gray-bg
+{
+    background-color: var(--gray);
+}
+
+.kitchens-container .card-img-overlay
+{
+    width: 100%;
+}

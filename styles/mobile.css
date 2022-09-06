@@ -30,10 +30,6 @@
     --font-bold: 'Open-Sans-Bold';
 }
 
-* {
-    padding: 1vw;
-}
-
 body {
     font-family: var(--font-default);
     grid-template-rows: repeat(3, auto);
@@ -205,7 +201,7 @@ footer > div:last-child {
     font-family: var(--font-bold);
 }
 
-#mobile-menu-btn {
+.mobile-menu-btn {
     display: flex;
     font-family: var(--font-bold);
     color: white;
@@ -215,7 +211,7 @@ footer > div:last-child {
     justify-content: center;
     align-items: center;
 }
-#mobile-menu-btn > p
+.mobile-menu-btn > p
 {
     margin: 0;
     padding: 0;
@@ -226,6 +222,6 @@ footer > div:last-child {
     align-items: center;
 }
 
-#menu-links {
+.menu-links {
     display: none;
 }
