@@ -1,26 +1,16 @@
-@font-face {
-    font-family: "OpenSans-Light";
-    src: url("./../fonts/OpenSans-Light.ttf");
-}
-@font-face {
-    font-family: "OpenSans-Bold";
-    src: url("./../fonts/OpenSans-Bold.ttf");
-}
-@font-face {
-    font-family: "Raleway";
-    src: url("./../fonts/Raleway-Regular.ttf");
-}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
     --blue: #00b5e8;
     --gray: #f6f6f6;
-    --font-header: "Raleway";
-    --font-text: "OpenSans-Light";
-    --font-text-bold: "OpenSans-Bold";
+    --font-header: "Raleway", sans-serif;
+    --font-text: "Open Sans", sans-serif;
 }
 
 body {
     font-family: var(--font-text);
+    font-weight: lighter;
+    font-size: 16px;
 }
 
 .custom-bg-blue {
@@ -33,47 +23,42 @@ body {
 }
 
 .bold {
-    font-family: var(--font-text-bold);
+    font-weight: 900;
 }
 
-.header
-{
+.header {
     position: relative;
-    height: 120px;
+    height: 100px;
 }
 .footer {
     position: relative;
-    height: 200px;
+    height: 100px;
 }
 
 .logo-top {
     z-index: 1;
-    height: 200%;
+    height: 210px;
     width: auto;
-    transform: translate(0, -25%);
+    transform: translate(0, -20%);
 }
 .logo-bottom {
-    height: 75%;
+    height: 120px;
     width: auto;
-    transform: translate(0, -75%);
+    transform: translate(0, -50%);
 }
 
 .menu-link {
     position: relative;
     color: black;
-    font-family: var(--font-text-bold);
+    font-family: var(--font-header);
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .menu-link.selected,
 .menu-link:hover {
     text-decoration: none;
     color: var(--blue);
-}
-
-*
-{
-    /* for checking all elements */
-    /* border: rgba(0, 0, 0, 0.5) 1px solid; */
 }
 
 .lang-sel-item {
@@ -94,6 +79,10 @@ a {
     text-decoration: none;
 }
 
+.text-black {
+    color: black;
+}
+
 .footer-links a {
     color: black;
     text-decoration: none;
@@ -106,6 +95,7 @@ a {
 .do-test-link,
 .do-test-link:hover {
     color: #f00;
+    text-decoration: underline solid;
 }
 
 .gray-bg {
@@ -121,7 +111,7 @@ a {
     content: "";
     background-color: var(--gray);
     /* width: 100%; */
-    height: 50%;
+    height: 100%;
 }
 
 .hover-img {
@@ -136,7 +126,7 @@ a {
 
 .hover-img:before,
 .hover-img:after {
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: rgba(255, 0, 0, 0.25);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -168,15 +158,13 @@ a {
 }
 
 .hover-img:hover:before,
-.hover-img:hover:after {
-    opacity: 1;
-}
-
+.hover-img:hover:after,
 .hover-img:hover figcaption {
     opacity: 1;
 }
 
 .circle-icon {
+    margin-left: 10px;
     display: inline-block;
     vertical-align: middle;
     position: relative;
@@ -194,4 +182,10 @@ a {
     border: 5px solid transparent;
     border-bottom: 5px solid rgba(255, 0, 0, 0.6);
     transform: translateX(-50%) translateY(-85%);
+}
+
+h1 {
+    font-family: var(--font-header);
+    font-weight: 400;
+    font-size: max(32px);
 }

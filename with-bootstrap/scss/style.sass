@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+$blue: #00b5e8
+$gray: #f6f6f6
+$font-header: 'Raleway', sans-serif
+$font-text: 'Open Sans', sans-serif
+$red-transparent: rgba(255, 0, 0, 0.25)
+
+body
+    font-family: $font-text
+    font-weight: lighter
+    font-size: 16px
+
+.custom-bg-blue
+    background-color: $blue
+
+::selection
+    background-color: $blue
+    color: $gray
+
+.bold
+    font-weight: 900
+
+.header
+    position: relative
+    height: 100px
+
+.footer
+    position: relative
+    height: 100px
+
+.logo-top
+    z-index: 1
+    height: 210px
+    width: auto
+    transform: translate(0, -20%)
+
+.logo-bottom
+    height: 120px
+    width: auto
+    transform: translate(0, -50%)
+
+.menu-link
+    position: relative
+    color: black
+    font-family: $font-header
+    font-weight: bold
+    font-size: 16px
+
+    &.selected, &:hover
+        text-decoration: none
+        color: $blue
+
+.lang-sel-item
+    font-family: $font-header
+    color: black
+    width: 30px
+    height: 30px
+    text-decoration: none
+
+    &.selected, &:hover
+        color: white
+        background-color: $blue
+
+a
+    text-decoration: none
+
+.text-black
+    color: black
+
+.footer-links
+    text-align: center
+
+    & a
+        color: black
+        text-decoration: none
+
+.do-test-link,
+.do-test-link:hover
+    color: #f00
+    text-decoration: underline solid
+
+.gray-bg
+    position: relative
+    background-color: $gray
+
+.top-text-gray-extend::after
+    position: absolute
+    display: block
+    left: 0
+    right: 0
+    content: ""
+    background-color: $gray
+    /* width: 100%; */
+    height: 100%
+
+// the images (kitchens atm)
+.hover-img
+    position: relative
+    text-align: center
+    overflow: hidden
+
+    *
+        transition: all 0.1s ease
+
+    &::before, &::after
+        background-color: $red-transparent
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        content: ""
+        transition: all 0.3s ease
+        z-index: 1
+        opacity: 0
+
+    img
+        backface-visibility: hidden
+
+    figcaption
+        color: white
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        opacity: 0
+        z-index: 2
+        font-size: 24px
+
+    &:hover
+        &::before, &::after, figcaption
+            opacity: 1
+
+.circle-icon
+    margin-left: 10px
+    display: inline-block
+    vertical-align: middle
+    position: relative
+    width: 20px
+    height: 20px
+    background: #fff
+    border-radius: 50%
+    transform: rotate(90deg)
+
+    &:after
+        position: absolute
+        content: ""
+        top: 50%
+        left: 50%
+        border: 5px solid transparent
+        border-bottom: 5px solid $red-transparent
+        transform: translateX(-50%) translateY(-85%)
+
+h1
+    font-family: $font-header
+    font-weight: 400
+    font-size: max(32px)
+
+.pricetag-container
+    z-index: 3
+    display: flex
+    flex-direction: column
+    color: white
+    font-family: $font-header
+    position: absolute
+    bottom: 50px
+    right: 20px
+    width: 150px
+    height: 50px
+    transform: rotate(3deg)
+
+    .top
+        background-color: $blue
+        width: 100%
+        height: 50px
+        text-align: left
+        font-size: 11px
+        transform: skewY(-8deg)
+
+        .price
+            text-align: center
+            font-style: italic
+            font-family: $font-text
+            font-weight: 900
+            margin: 5px
+            font-size: max(32px)
+            transform: translateY(-50%)
+    .bottom
+        display: flex
+        flex-direction: row
+        position: relative
+        margin-top: 7px
+        width: 50%
+        height: 25px
+        transform: skewY(-8deg)
+
+        .left
+            position: relative
+            border: 30px solid transparent
+            border-top: 25px solid $blue
+            transform: translateX(50%) skewX(45deg)
+        .right
+            position: relative
+            border: 12px solid transparent
+            border-top: 12px solid $blue
+            transform: translateY(-50%) rotate(-90deg) skewX(45deg)

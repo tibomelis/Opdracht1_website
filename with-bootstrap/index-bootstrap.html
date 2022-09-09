@@ -1,0 +1,485 @@
+<!-- 
+    Auteur:         Tibo Melis
+    Omschrijving:   Een opdracht van MaxServ
+    Datum:          9/1/2022    
+    Bestand:        De html code voor de website
+
+ -->
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Lorem</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ### Bootstrap ###-->
+    <!-- css -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"
+        defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"
+        defer></script>
+
+    <!-- ### swiper ### -->
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+    <script src="./js/swiper-init.js" defer></script>
+
+    <!-- ### Eigen links ### -->
+    <!-- css -->
+    <link rel="stylesheet" href="./scss/style.css">
+
+
+    <!-- icon -->
+    <link rel="shortcut icon" href="./../images/lorem-logo.png">
+</head>
+<body>
+    <div class="container-lg">
+        <!-- logo, menu, lang-select -->
+        <div class="p-4 pb-0 container-fluid">
+            <!-- language selection -->
+            <div class="pe-3 p-2 lang-sel d-flex justify-content-end">
+                <a class="p-1 lang-sel-item selected justify-self-center text-center" href="https://maxserv.com">
+                    <p class="mb-0">NL</p>
+                </a>
+                <a class="p-1 lang-sel-item justify-self-center text-center" href="https://maxserv.com">
+                    <p class="mb-0">EN</p>
+                </a>
+            </div>
+            <!-- logo and menu -->
+            <header class="pb-2 d-flex header justify-content-between">
+                <!-- logo -->
+                <img class="ms-3 align-self-start logo-top border" src="./../images/lorem-logo.png" alt="lorem-logo">
+                <!-- menu -->
+                <nav class="align-self-end">
+                    <!-- hide when larger than medium show when smaller -->
+                    <div class="d-md-none">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Menu</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="https://maxserv.com">Homepage</a>
+                                    <a class="dropdown-item" href="https://maxserv.com">Over ons</a>
+                                    <a class="dropdown-item" href="https://maxserv.com">Projecten</a>
+                                    <a class="dropdown-item" href="https://maxserv.com">Contact</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- show when larger than medium hide when smaller -->
+                    <div class="d-none d-md-block">
+                        <a class="p-2 me-2 menu-link selected" href="https://maxserv.com">Homepage</a>
+                        <a class="p-2 me-2 menu-link" href="https://maxserv.com">Over ons</a>
+                        <a class="p-2 me-2 menu-link" href="https://maxserv.com">Projecten</a>
+                        <a class="p-2 me-2 menu-link" href="https://maxserv.com">Contact</a>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <!-- intro text -->
+        <div class="container-fluid gray-bg top-text-gray-extend p-5">
+            <h1 class="ps-2 pt-5 pb-0">Ontdek al <span class="bold">onze projecten</span></h1>
+            <div class="d-flex">
+                <p class="p-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique cumque quaerat deleniti veniam
+                    qui
+                    odit porro, officia vero tempore nobis laboriosam veritatis. Perspiciatis eveniet cumque similique
+                    sunt
+                    tenetur ullam ut laboriosam maiores? Debitis, ipsum suscipit perferendis a illo inventore deserunt.
+                </p>
+                <div class="d-none d-lg-block mx-5" style="width: 75%;"></div>
+            </div>
+        </div>
+        <!-- kitchen images -->
+
+        <div class="container p-lg-5 mb-0 pb-0">
+            <div class="d-lg-none d-block gray-bg border">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <a href="https://maxserv.com">
+                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                                <div class="pricetag-container">
+                                    <div class="top">
+                                        <div class="p-1">PRIJS</div>
+                                        <h1 class="price">9.250,-</h1>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="left"></div>
+                                        <div class="right"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://maxserv.com">
+                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                                <div class="pricetag-container">
+                                    <div class="top">
+                                        <div class="p-1">PRIJS</div>
+                                        <h1 class="price">9.250,-</h1>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="left"></div>
+                                        <div class="right"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://maxserv.com">
+                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                                <div class="pricetag-container">
+                                    <div class="top">
+                                        <div class="p-1">PRIJS</div>
+                                        <h1 class="price">9.250,-</h1>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="left"></div>
+                                        <div class="right"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://maxserv.com">
+                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                                <div class="pricetag-container">
+                                    <div class="top">
+                                        <div class="p-1">PRIJS</div>
+                                        <h1 class="price">9.250,-</h1>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="left"></div>
+                                        <div class="right"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://maxserv.com">
+                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                                <div class="pricetag-container">
+                                    <div class="top">
+                                        <div class="p-1">PRIJS</div>
+                                        <h1 class="price">9.250,-</h1>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="left"></div>
+                                        <div class="right"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://maxserv.com">
+                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                                <div class="pricetag-container">
+                                    <div class="top">
+                                        <div class="p-1">PRIJS</div>
+                                        <h1 class="price">9.250,-</h1>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="left"></div>
+                                        <div class="right"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="d-none d-lg-block">
+                <div class="row">
+                    <div class="col-12 col-lg-6 px-2 m-0">
+                        <figure class="hover-img p-0">
+                            <a href="https://maxserv.com">
+                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                                <figcaption>
+                                    <p>Ultimate Design <span class="circle-icon"></span> </p>
+                                </figcaption>
+                                <div class="pricetag-container">
+                                    <div class="top">
+                                        <div class="p-1">PRIJS</div>
+                                        <div class="price p-1">9.250,-</div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="left"></div>
+                                        <div class="right"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-6 px-2 m-0">
+                        <figure class="hover-img p-0">
+                            <a href="https://maxserv.com">
+                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                                <figcaption>
+                                    <p>Ultimate Design <span class="circle-icon"></span> </p>
+                                </figcaption>
+                                <div class="pricetag-container">
+                                    <div class="top">
+                                        <div class="p-1">PRIJS</div>
+                                        <div class="price p-1">9.250,-</div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="left"></div>
+                                        <div class="right"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-6 px-2 m-0">
+                        <figure class="hover-img p-0">
+                            <a href="https://maxserv.com">
+                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                                <figcaption>
+                                    <p>Ultimate Design <span class="circle-icon"></span> </p>
+                                </figcaption>
+                                <div class="pricetag-container">
+                                    <div class="top">
+                                        <div class="p-1">PRIJS</div>
+                                        <div class="price p-1">9.250,-</div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="left"></div>
+                                        <div class="right"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-6 px-2 m-0">
+                        <figure class="hover-img p-0">
+                            <a href="https://maxserv.com">
+                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                                <figcaption>
+                                    <p>Ultimate Design <span class="circle-icon"></span> </p>
+                                </figcaption>
+                                <div class="pricetag-container">
+                                    <div class="top">
+                                        <div class="p-1">PRIJS</div>
+                                        <div class="price p-1">9.250,-</div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="left"></div>
+                                        <div class="right"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-6 px-2 m-0">
+                        <figure class="hover-img p-0">
+                            <a href="https://maxserv.com">
+                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                                <figcaption>
+                                    <p>Ultimate Design <span class="circle-icon"></span> </p>
+                                </figcaption>
+                                <div class="pricetag-container">
+                                    <div class="top">
+                                        <div class="p-1">PRIJS</div>
+                                        <div class="price p-1">9.250,-</div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="left"></div>
+                                        <div class="right"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-6 px-2 m-0">
+                        <figure class="hover-img p-0">
+                            <a href="https://maxserv.com">
+                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                                <figcaption>
+                                    <p>Ultimate Design <span class="circle-icon"></span> </p>
+                                </figcaption>
+                                <div class="pricetag-container">
+                                    <div class="top">
+                                        <div class="p-1">PRIJS</div>
+                                        <div class="price p-1">9.250,-</div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="left"></div>
+                                        <div class="right"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- more projects button -->
+        <div class="d-flex justify-content-center my-4 mb-5 p-1">
+            <a href="https://maxserv.com">
+                <div class="py-2 px-3 custom-bg-blue text-white bold">MEER PROJECTEN TONEN</div>
+            </a>
+        </div>
+        <!-- need more info? -->
+        <div class="container-fluid gray-bg">
+            <article class="ms-3 p-4">
+                <h1>Meer informatie nodig?</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus maiores velit et pariatur
+                    sequi
+                    laborum, adipisci expedita eum ea earum magnam fuga quis voluptatum, perferendis nam. Assumenda
+                    saepe
+                    eveniet ab?
+                    Debitis quaerat, blanditiis itaque tempore sapiente quam, deserunt, ipsum non accusantium nulla
+                    dignissimos sit quisquam architecto possimus molestiae voluptatum delectus assumenda nostrum
+                    natus
+                    incidunt dicta doloribus eum! Sed, praesentium dicta.
+                    Cumque quia, asperiores sint dolorum fugiat, ab commodi dolor expedita voluptatum repellendus,
+                    assumenda
+                    similique. Voluptatibus quisquam est magni, ipsum eaque unde quam possimus et deserunt,
+                    temporibus
+                    nulla
+                    itaque, voluptates numquam.
+                    Mollitia, omnis rem tempore amet nobis error voluptatem sit praesentium sed eos ut quaerat, unde
+                    et
+                    eligendi obcaecati quisquam dicta consequuntur voluptatum, assumenda explicabo cumque itaque
+                    optio
+                    quia!
+                    Expedita, officiis.
+                    Enim cupiditate sit corporis non laboriosam ipsam rem facilis deserunt, nam odit placeat,
+                    assumenda
+                    dolore, praesentium nihil ullam beatae magnam. Suscipit nulla nisi quod quaerat quos natus qui
+                    libero
+                    tenetur?
+                </p>
+            </article>
+        </div>
+        <!-- wow effect, fast projects, ideas for website -->
+        <div class="container-fluid p-5 pb-0">
+            <div class="row">
+                <!-- wow effect -->
+                <div class="col-12 col-lg-6">
+                    <article>
+                        <h1>Het WAUW effect</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, debitis unde autem dolorem
+                            minima aspernatur culpa quis molestias sunt eligendi dolorum voluptatibus laudantium
+                            recusandae. Aliquam assumenda fugiat suscipit libero laboriosam.
+                        </p>
+                    </article>
+                </div>
+                <!-- fast projects -->
+                <div class="col-12 col-lg-6">
+                    <article>
+                        <h1>Snelle en kwaliteitsvolle projecten</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptate hic labore
+                            neque ullam pariatur! Maiores cupiditate inventore harum, aliquam doloribus maxime
+                            reprehenderit consequatur voluptate, quas consectetur deleniti libero voluptatem. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Cum, perspiciatis?
+                        </p>
+                    </article>
+                    <!-- ideas -->
+                    <article>
+                        <h1>Op zoek naar ideeën voor uw website?</h1>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo facilis hic quam omnis
+                            sint,
+                            eaque ex
+                            autem nam sunt! Porro laudantium libero enim tempore aperiam aspernatur. <a
+                                href="https://maxserv.com" class="do-test-link">Doe de test</a> en ontdek alleopties.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <!--  links at bottom -->
+        <div class="container-fluid gray-bg mt-5 py-5">
+            <div class="container">
+                <div class="row">
+                    <div
+                        class="col-12 col-sm-4 d-sm-block d-flex flex-column align-items-center justify-content-center">
+                        <p class="bold">Inspiratie</p>
+                        <a class="text-body" href="https://maxserv.com">
+                            <p class=>Medium</p>
+                        </a>
+                        <a class="text-body" href="https://maxserv.com">
+                            <p>Designerdepot</p>
+                        </a>
+                        <a class="text-body" href="https://maxserv.com">
+                            <p>Portfolio</p>
+                        </a>
+                    </div>
+                    <div
+                        class="col-12 col-sm-4 d-sm-block d-flex flex-column align-items-center justify-content-center">
+                        <p class="bold">Service</p>
+                        <a class="text-body" href="https://maxserv.com">
+                            <p>Over ons</p>
+                        </a>
+                        <a class="text-body" href="https://maxserv.com">
+                            <p>Contact</p>
+                        </a>
+                        <a class="text-body" href="https://maxserv.com">
+                            <p>Servicepunten</p>
+                        </a>
+                    </div>
+                    <div
+                        class="col-12 col-sm-4 d-sm-block d-flex flex-column align-items-center justify-content-center">
+                        <p class="bold">Informatie</p>
+                        <a class="text-body" href="https://maxserv.com">
+                            <p>Github</p>
+                        </a>
+                        <a class="text-body" href="https://maxserv.com">
+                            <p>Atlassian</p>
+                        </a>
+                        <a class="text-body" href="https://maxserv.com">
+                            <p>Slack</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- logo with copyright -->
+        <div class="d-flex flex-column my-4">
+            <div class="d-flex align-items-center justify-content-center footer">
+                <div>
+                    <p class="me-sm-5 m-0">Copyright &copy; 2018</p>
+                </div>
+                <div class="d-flex">
+                    <img class="border logo-bottom" src="./../images/lorem-logo.png" alt="lorem-logo">
+                </div>
+                <div>
+                    <p class="ms-sm-5 m-0">Alle rechten voorbehouden</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a class="text-black" href="https://maxserv.com">
+                    Voorwaarden
+                </a>
+                <p class="mx-2">|</p>
+                <a class="text-black" href="https://maxserv.com">
+                    Sitemap
+                </a>
+                <p class="mx-2">|</p>
+                <a class="text-black me-5" href="https://maxserv.com">
+                    Afmelden
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
