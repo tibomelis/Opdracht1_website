@@ -8,6 +8,7 @@
 
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <title>Lorem</title>
     <meta charset="UTF-8">
@@ -15,78 +16,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ### Bootstrap ###-->
-    <!-- css -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"
-        defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <!-- js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"
-        defer></script>
-
-    <!-- ### swiper ### -->
-    <!-- css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <!-- js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
-    <script src="./js/swiper-init.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- ### Eigen links ### -->
     <!-- css -->
-    <link rel="stylesheet" href="./scss/style.css">
-
-
+    <link rel="stylesheet" href="./sass/style.css">
+    <!-- js -->
+    <script src="./js/main.js" defer></script>
     <!-- icon -->
     <link rel="shortcut icon" href="./../images/lorem-logo.png">
 </head>
+
 <body>
-    <div class="container-lg">
+    <div class="body-2 container-lg container-fluid">
+        <!-- overlay, popup -->
+        <div>
+            <div class="contrast-overlay d-none"></div>
+            <div class="popup-container d-none">
+                <div class="popup-close-btn" onclick="show_hide()">X</div>
+                <img class="popup-img" src="./../images/kitchen.png" alt="image">
+            </div>
+        </div>
         <!-- logo, menu, lang-select -->
         <div class="p-4 pb-0 container-fluid">
             <!-- language selection -->
             <div class="pe-3 p-2 lang-sel d-flex justify-content-end">
                 <a class="p-1 lang-sel-item selected justify-self-center text-center" href="https://maxserv.com">
-                    <p class="mb-0">NL</p>
+                    <p class="mb-0 font-monospace">NL</p>
                 </a>
                 <a class="p-1 lang-sel-item justify-self-center text-center" href="https://maxserv.com">
-                    <p class="mb-0">EN</p>
+                    <p class="mb-0 font-monospace">EN</p>
                 </a>
             </div>
             <!-- logo and menu -->
-            <header class="pb-2 d-flex header justify-content-between">
+            <header class="d-flex header justify-content-lg-between">
                 <!-- logo -->
                 <img class="ms-3 align-self-start logo-top border" src="./../images/lorem-logo.png" alt="lorem-logo">
-                <!-- menu -->
-                <nav class="align-self-end">
-                    <!-- hide when larger than medium show when smaller -->
-                    <div class="d-md-none">
-                        <ul class="nav nav-pills">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                                    aria-haspopup="true" aria-expanded="false">Menu</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="https://maxserv.com">Homepage</a>
-                                    <a class="dropdown-item" href="https://maxserv.com">Over ons</a>
-                                    <a class="dropdown-item" href="https://maxserv.com">Projecten</a>
-                                    <a class="dropdown-item" href="https://maxserv.com">Contact</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- show when larger than medium hide when smaller -->
-                    <div class="d-none d-md-block">
-                        <a class="p-2 me-2 menu-link selected" href="https://maxserv.com">Homepage</a>
-                        <a class="p-2 me-2 menu-link" href="https://maxserv.com">Over ons</a>
-                        <a class="p-2 me-2 menu-link" href="https://maxserv.com">Projecten</a>
-                        <a class="p-2 me-2 menu-link" href="https://maxserv.com">Contact</a>
-                    </div>
-                </nav>
+                <div class="d-flex flex-row">
+                    <!-- menu -->
+                    <nav class="align-self-center mt-5 mx-auto mx-lg-0">
+                        <!-- hide when larger than medium show when smaller -->
+                        <div class="d-flex d-lg-none">
+                            <div class="ms-1 dropdown">
+                                <button class="btn dropdown-toggle show" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                Menu
+                                </button>
+                                <ul class="dropdown-menu" data-popper-placement="bottom-start">
+                                <li> <a class="dropdown-item" href="https://maxserv.com">Homepage</a></li>
+                                <li> <a class="dropdown-item" href="https://maxserv.com">Over ons</a></li>
+                                <li> <a class="dropdown-item" href="https://maxserv.com">Projecten</a></li>
+                                <li> <a class="dropdown-item" href="https://maxserv.com">Contact</a></li>
+                                </ul>
+                            </div>
+                            <a class="ms-1 align-self-center text-black text-center hover-pointer" onclick="toggle_contrast()">Toggle contrast</a>
+                        </div>
+                        <!-- show when larger than medium hide when smaller -->
+                        <div class="d-none d-lg-block">
+                            <a class="p-3 mx-1 menu-link selected" href="https://maxserv.com">Homepage</a>
+                            <a class="p-3 mx-1 menu-link" href="https://maxserv.com">Over ons</a>
+                            <a class="p-3 mx-1 menu-link" href="https://maxserv.com">Projecten</a>
+                            <a class="p-3 mx-1 menu-link" href="https://maxserv.com">Contact</a>
+                            |
+                            <a class="ms-1 align-self-center text-black hover-pointer" onclick="toggle_contrast()">Toggle contrast</a>
+                        </div>
+                    </nav>
+                </div>
             </header>
         </div>
         <!-- intro text -->
-        <div class="container-fluid gray-bg top-text-gray-extend p-5">
+        <div class="container-fluid custom-bg-gray top-text-gray-extend p-5">
             <h1 class="ps-2 pt-5 pb-0">Ontdek al <span class="bold">onze projecten</span></h1>
             <div class="d-flex">
                 <p class="p-2">
@@ -100,234 +100,136 @@
             </div>
         </div>
         <!-- kitchen images -->
-
         <div class="container p-lg-5 mb-0 pb-0">
-            <div class="d-lg-none d-block gray-bg border">
-                <!-- Slider main container -->
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <a href="https://maxserv.com">
-                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
-                                <div class="pricetag-container">
-                                    <div class="top">
-                                        <div class="p-1">PRIJS</div>
-                                        <h1 class="price">9.250,-</h1>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="left"></div>
-                                        <div class="right"></div>
-                                    </div>
+            <div class="row">
+                <div class="col-12 col-lg-6 px-2 m-0">
+                    <figure class="hover-img p-0">
+                        <a class="popup-trigger">
+                            <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                            <figcaption>
+                                <p>Ultimate Design <span class="circle-icon"></span> </p>
+                            </figcaption>
+                            <div class="pricetag-container">
+                                <div class="top">
+                                    <div class="p-1">PRIJS</div>
+                                    <div class="price p-1">loading...</div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="https://maxserv.com">
-                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
-                                <div class="pricetag-container">
-                                    <div class="top">
-                                        <div class="p-1">PRIJS</div>
-                                        <h1 class="price">9.250,-</h1>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="left"></div>
-                                        <div class="right"></div>
-                                    </div>
+                                <div class="bottom">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="https://maxserv.com">
-                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
-                                <div class="pricetag-container">
-                                    <div class="top">
-                                        <div class="p-1">PRIJS</div>
-                                        <h1 class="price">9.250,-</h1>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="left"></div>
-                                        <div class="right"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="https://maxserv.com">
-                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
-                                <div class="pricetag-container">
-                                    <div class="top">
-                                        <div class="p-1">PRIJS</div>
-                                        <h1 class="price">9.250,-</h1>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="left"></div>
-                                        <div class="right"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="https://maxserv.com">
-                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
-                                <div class="pricetag-container">
-                                    <div class="top">
-                                        <div class="p-1">PRIJS</div>
-                                        <h1 class="price">9.250,-</h1>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="left"></div>
-                                        <div class="right"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="https://maxserv.com">
-                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
-                                <div class="pricetag-container">
-                                    <div class="top">
-                                        <div class="p-1">PRIJS</div>
-                                        <h1 class="price">9.250,-</h1>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="left"></div>
-                                        <div class="right"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
+                            </div>
+                        </a>
+                    </figure>
                 </div>
-            </div>
-            <div class="d-none d-lg-block">
-                <div class="row">
-                    <div class="col-12 col-lg-6 px-2 m-0">
-                        <figure class="hover-img p-0">
-                            <a href="https://maxserv.com">
-                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
-                                <figcaption>
-                                    <p>Ultimate Design <span class="circle-icon"></span> </p>
-                                </figcaption>
-                                <div class="pricetag-container">
-                                    <div class="top">
-                                        <div class="p-1">PRIJS</div>
-                                        <div class="price p-1">9.250,-</div>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="left"></div>
-                                        <div class="right"></div>
-                                    </div>
+                <div class="col-12 col-lg-6 px-2 m-0">
+                    <figure class="hover-img p-0">
+                        <a class="popup-trigger">
+                            <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                            <figcaption>
+                                <p>Ultimate Design <span class="circle-icon"></span> </p>
+                            </figcaption>
+                            <div class="pricetag-container">
+                                <div class="top">
+                                    <div class="p-1">PRIJS</div>
+                                    <div class="price p-1">loading...</div>
                                 </div>
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="col-12 col-lg-6 px-2 m-0">
-                        <figure class="hover-img p-0">
-                            <a href="https://maxserv.com">
-                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
-                                <figcaption>
-                                    <p>Ultimate Design <span class="circle-icon"></span> </p>
-                                </figcaption>
-                                <div class="pricetag-container">
-                                    <div class="top">
-                                        <div class="p-1">PRIJS</div>
-                                        <div class="price p-1">9.250,-</div>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="left"></div>
-                                        <div class="right"></div>
-                                    </div>
+                                <div class="bottom">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
                                 </div>
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="col-12 col-lg-6 px-2 m-0">
-                        <figure class="hover-img p-0">
-                            <a href="https://maxserv.com">
-                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
-                                <figcaption>
-                                    <p>Ultimate Design <span class="circle-icon"></span> </p>
-                                </figcaption>
-                                <div class="pricetag-container">
-                                    <div class="top">
-                                        <div class="p-1">PRIJS</div>
-                                        <div class="price p-1">9.250,-</div>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="left"></div>
-                                        <div class="right"></div>
-                                    </div>
+                            </div>
+                        </a>
+                    </figure>
+                </div>
+                <div class="col-12 col-lg-6 px-2 m-0">
+                    <figure class="hover-img p-0">
+                        <a class="popup-trigger">
+                            <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                            <figcaption>
+                                <p>Ultimate Design <span class="circle-icon"></span> </p>
+                            </figcaption>
+                            <div class="pricetag-container">
+                                <div class="top">
+                                    <div class="p-1">PRIJS</div>
+                                    <div class="price p-1">loading...</div>
                                 </div>
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="col-12 col-lg-6 px-2 m-0">
-                        <figure class="hover-img p-0">
-                            <a href="https://maxserv.com">
-                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
-                                <figcaption>
-                                    <p>Ultimate Design <span class="circle-icon"></span> </p>
-                                </figcaption>
-                                <div class="pricetag-container">
-                                    <div class="top">
-                                        <div class="p-1">PRIJS</div>
-                                        <div class="price p-1">9.250,-</div>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="left"></div>
-                                        <div class="right"></div>
-                                    </div>
+                                <div class="bottom">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
                                 </div>
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="col-12 col-lg-6 px-2 m-0">
-                        <figure class="hover-img p-0">
-                            <a href="https://maxserv.com">
-                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
-                                <figcaption>
-                                    <p>Ultimate Design <span class="circle-icon"></span> </p>
-                                </figcaption>
-                                <div class="pricetag-container">
-                                    <div class="top">
-                                        <div class="p-1">PRIJS</div>
-                                        <div class="price p-1">9.250,-</div>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="left"></div>
-                                        <div class="right"></div>
-                                    </div>
+                            </div>
+                        </a>
+                    </figure>
+                </div>
+                <div class="col-12 col-lg-6 px-2 m-0">
+                    <figure class="hover-img p-0">
+                        <a class="popup-trigger">
+                            <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                            <figcaption>
+                                <p>Ultimate Design <span class="circle-icon"></span> </p>
+                            </figcaption>
+                            <div class="pricetag-container">
+                                <div class="top">
+                                    <div class="p-1">PRIJS</div>
+                                    <div class="price p-1">loading...</div>
                                 </div>
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="col-12 col-lg-6 px-2 m-0">
-                        <figure class="hover-img p-0">
-                            <a href="https://maxserv.com">
-                                <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
-                                <figcaption>
-                                    <p>Ultimate Design <span class="circle-icon"></span> </p>
-                                </figcaption>
-                                <div class="pricetag-container">
-                                    <div class="top">
-                                        <div class="p-1">PRIJS</div>
-                                        <div class="price p-1">9.250,-</div>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="left"></div>
-                                        <div class="right"></div>
-                                    </div>
+                                <div class="bottom">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
                                 </div>
-                            </a>
-                        </figure>
-                    </div>
+                            </div>
+                        </a>
+                    </figure>
+                </div>
+                <div class="col-12 col-lg-6 px-2 m-0">
+                    <figure class="hover-img p-0">
+                        <a class="popup-trigger">
+                            <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                            <figcaption>
+                                <p>Ultimate Design <span class="circle-icon"></span> </p>
+                            </figcaption>
+                            <div class="pricetag-container">
+                                <div class="top">
+                                    <div class="p-1">PRIJS</div>
+                                    <div class="price p-1">loading...</div>
+                                </div>
+                                <div class="bottom">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                </div>
+                <div class="col-12 col-lg-6 px-2 m-0">
+                    <figure class="hover-img p-0">
+                        <a class="popup-trigger">
+                            <img class="img-fluid" src="./../images/kitchen.png" alt="no image? reload page">
+                            <figcaption>
+                                <p>Ultimate Design <span class="circle-icon"></span> </p>
+                            </figcaption>
+                            <div class="pricetag-container">
+                                <div class="top">
+                                    <div class="p-1">PRIJS</div>
+                                    <div class="price p-1">loading...</div>
+                                </div>
+                                <div class="bottom">
+                                    <div class="left"></div>
+                                    <div class="right"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
                 </div>
             </div>
         </div>
+        <!-- set price -->
+        <script defer>
+            const setprice = (newprice) => { for (let item of document.getElementsByClassName('price')) { item.innerHTML = newprice; } };
+            // setprice('9.450,-');
+            setprice('9.250,-');
+        </script>
         <!-- more projects button -->
         <div class="d-flex justify-content-center my-4 mb-5 p-1">
             <a href="https://maxserv.com">
@@ -335,7 +237,7 @@
             </a>
         </div>
         <!-- need more info? -->
-        <div class="container-fluid gray-bg">
+        <div class="container-fluid custom-bg-gray">
             <article class="ms-3 p-4">
                 <h1>Meer informatie nodig?</h1>
                 <p>
@@ -408,14 +310,13 @@
             </div>
         </div>
         <!--  links at bottom -->
-        <div class="container-fluid gray-bg mt-5 py-5">
-            <div class="container">
-                <div class="row">
-                    <div
-                        class="col-12 col-sm-4 d-sm-block d-flex flex-column align-items-center justify-content-center">
+        <div class="container-fluid custom-bg-gray mt-5 py-5 px-1 px-lg-5">
+            <div class="container pb-4">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-12 col-sm-2 mx-4 d-sm-block text-md-start text-center">
                         <p class="bold">Inspiratie</p>
                         <a class="text-body" href="https://maxserv.com">
-                            <p class=>Medium</p>
+                            <p>Medium</p>
                         </a>
                         <a class="text-body" href="https://maxserv.com">
                             <p>Designerdepot</p>
@@ -424,8 +325,7 @@
                             <p>Portfolio</p>
                         </a>
                     </div>
-                    <div
-                        class="col-12 col-sm-4 d-sm-block d-flex flex-column align-items-center justify-content-center">
+                    <div class="col-12 col-sm-2 mx-4 d-sm-block text-md-start text-center">
                         <p class="bold">Service</p>
                         <a class="text-body" href="https://maxserv.com">
                             <p>Over ons</p>
@@ -437,8 +337,7 @@
                             <p>Servicepunten</p>
                         </a>
                     </div>
-                    <div
-                        class="col-12 col-sm-4 d-sm-block d-flex flex-column align-items-center justify-content-center">
+                    <div class="col-12 col-sm-2 mx-4 d-sm-block text-md-start text-center">
                         <p class="bold">Informatie</p>
                         <a class="text-body" href="https://maxserv.com">
                             <p>Github</p>
@@ -454,32 +353,23 @@
             </div>
         </div>
         <!-- logo with copyright -->
-        <div class="d-flex flex-column my-4">
-            <div class="d-flex align-items-center justify-content-center footer">
-                <div>
-                    <p class="me-sm-5 m-0">Copyright &copy; 2018</p>
-                </div>
-                <div class="d-flex">
-                    <img class="border logo-bottom" src="./../images/lorem-logo.png" alt="lorem-logo">
-                </div>
-                <div>
-                    <p class="ms-sm-5 m-0">Alle rechten voorbehouden</p>
-                </div>
+        <div class="footer d-flex flex-column align-items-center">
+            <div class="d-flex flex-sm-row flex-column align-items-center">
+                <div class="m-5 d-none d-sm-block"></div>
+                <p class="justify-self-center p-sm-3 p-s-2 text-center">Copyright &copy; 2018</p>
+                <img class="border logo-bottom" src="./../images/lorem-logo.png" alt="lorem-logo">
+                <p class="justify-self-center p-sm-3 p-s-2 text-center">Alle rechten voorbehouden</p>
             </div>
-            <div class="d-flex justify-content-center">
-                <a class="text-black" href="https://maxserv.com">
-                    Voorwaarden
-                </a>
-                <p class="mx-2">|</p>
-                <a class="text-black" href="https://maxserv.com">
-                    Sitemap
-                </a>
-                <p class="mx-2">|</p>
-                <a class="text-black me-5" href="https://maxserv.com">
-                    Afmelden
-                </a>
+            <div class="d-sm-flex mb-5 text-md-start text-center">
+                <div class="mx-2"></div>
+                <a class="text-black" href="https://maxserv.com">Voorwaarden</a>
+                <p class="mx-2 d-sm-block d-none">|</p>
+                <a class="text-black" href="https://maxserv.com">Sitemap</a>
+                <p class="mx-2 d-sm-block d-none">|</p>
+                <a class="text-black" href="https://maxserv.com">Afmelden</a>
             </div>
         </div>
     </div>
 </body>
+
 </html>

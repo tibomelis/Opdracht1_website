@@ -1,0 +1,19 @@
+.custom-bg                        
+    &-blue
+        background-color: $blue
+    &-darkgray
+        background-color: #eee        
+    &-gray
+        position: relative
+        background-color: $gray
+        &.top-text-gray-extend::after
+            position: absolute
+            display: block
+            left: 0
+            right: 0
+            content: ""
+            background-color: $gray
+            height: 100%
+.custom-text
+    &-black
+        color: black

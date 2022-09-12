@@ -1,0 +1,53 @@
+.pricetag-container
+    z-index: 3
+    display: flex
+    flex-direction: column
+    color: white
+    font-family: $font-header
+    position: absolute
+    bottom: 25px
+    right: 0
+    width: 150px
+    height: 50px
+    transform: rotate(3deg) scale(0.7)
+
+    @include if-size('xs')
+        bottom: 50px
+        right: 25px
+        transform: scale(1)
+
+    .top
+        background-color: $blue
+        width: 100%
+        height: 50px
+        text-align: left
+        font-size: 11px
+        transform: skewY(-8deg)
+
+        .price
+            text-align: center
+            font-style: italic
+            font-family: $font-text
+            font-weight: 900
+            margin: 5px
+            font-size: max(32px)
+            transform: translateY(-50%)
+    .bottom
+        display: flex
+        flex-direction: row
+        position: relative
+        margin-top: 7px
+        width: 50%
+        height: 25px
+        transform: skewY(-8deg)
+
+        .left
+            position: relative
+            border: 30px solid transparent
+            border-top: 25px solid $blue
+            transform: translateX(50%) skewX(45deg)
+        .right
+            position: relative
+            border: 12px solid transparent
+            border-top: 12px solid $blue
+            transform: translateY(-50%) rotate(-90deg) skewX(45deg)

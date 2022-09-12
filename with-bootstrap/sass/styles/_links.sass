@@ -1,0 +1,33 @@
+a
+    text-decoration: none
+    
+.footer-links
+    text-align: center
+
+.do-test-link
+    color: #f00
+    text-decoration: underline solid
+    &:hover
+        color: #d00
+        text-decoration: underline double
+
+.menu-link
+    position: relative
+    color: black
+    font-family: $font-header
+    font-weight: bold
+    font-size: 16px
+
+    &.selected, &:hover
+        text-decoration: none
+        color: $blue
+        &::after
+            position: absolute
+            z-index: 1
+            content: ''
+            bottom: 0
+            left: 0
+            width: 75%
+            transform: translateX(15%)
+            height: 3px
+            background-color: $blue
