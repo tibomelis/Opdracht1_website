@@ -52,7 +52,7 @@ include '/Users/tibom/maxserv/Opdracht1_website/src/variables.php';
     <!--  links at bottom -->
     <?php include '/Users/tibom/maxserv/Opdracht1_website/src/footer_links.php' ?>
     <!-- logo with copyright -->
-    <?php include '/Users/tibom/maxserv/Opdracht1_website/src/footer.php' ?>
+    <?php include '/Users/tibom/maxserv/Opdracht1_website/src/footer.html' ?>
 </div>
 </body>
 
