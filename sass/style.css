@@ -311,4 +311,21 @@ h1 {
   font-size: 31px;
 }
 
+.contrast-toggler-white:after {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 3rem;
+  border: 2px solid #656565;
+}
+.contrast-toggler-black:after {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 3rem;
+  background-color: #656565;
+}
+
 /*# sourceMappingURL=style.css.map */

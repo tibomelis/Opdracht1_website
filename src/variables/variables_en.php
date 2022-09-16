@@ -1,7 +1,7 @@
 <?php
-$homepage = '/maxserv/Opdracht1_website/index.php';
+$homepage = '/index.php';
 // Logo header en footer
-$logo = '/maxserv/Opdracht1_website/images/lorem-logo.png';
+$logo = '/images/lorem-logo.png';
 
 // "Ontdek al onze projecten" met bijbehorende tekst
 $intro_title = 'Discover all of';
@@ -21,12 +21,6 @@ $quality_proj_txt = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Re
 $ideas_title = 'Looking for ideas for your site?';
 $ideas_txt = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo facilis hic quam omnis sint, eaque ex autem nam sunt! Porro laudantium libero enim tempore aperiam aspernatur. <a href="https://maxserv.com" class="do-test-link">Do the test</a> and discover all options.';
 
-
-/*
-
-
-*/
-
 $copyright_txt = 'All rights reserved';
 $load_projects_txt = 'LOAD MORE PROJECTS';
 
@@ -39,3 +33,56 @@ $footer_nav_links = [
 $bottom_page_links = ['Terms and conditions', 'Sitemap', 'Log out'];
 
 $back_button_txt = 'BACK';
+
+function add_project($src, $name, $price, $href)
+{
+    global $projects;
+    $projects[] = ['src' => $src, 'name' => $name, 'price' => $price, 'href' => $href];
+}
+
+function get_project($i)
+{
+    global $projects;
+    return get_project_container($i);
+}
+
+function getPriceTag($price)
+{
+    return "
+<div class='pricetag-container'>
+    <div class='top'>
+      <div class='p-1'>PRIJS</div>
+      <div class='price p-1'>$price</div>
+    </div>
+    <div class='bottom'>
+      <div class='left'></div>
+      <div class='right'></div>
+    </div>
+</div>";
+}
+
+function get_project_container($i)
+{
+    global $projects;
+    $_src = $projects[$i]['src'];
+    $_price_tag = getPricetag($projects[$i]['price']);
+    return "<figure class='hover-img p-0'>
+                <a class='popup-trigger'>
+                    <img class='img-fluid project-img' src='$_src' alt='no image? reload page'>
+                    <figcaption>
+                        <p>Ultimate Design <span class='circle-icon'></span></p>
+                    </figcaption>
+                    $_price_tag
+                </a>
+            </figure>";
+}
+
+$projects = [];
+add_project('/images/projects/proj_1.png', '1', '3.500,-', 'https://maxserv.com');
+add_project('/images/projects/proj_2.png', '2', '5.450,-', 'https://maxserv.com');
+add_project('/images/projects/proj_3.png', '3', '2.000,-', 'https://maxserv.com');
+add_project('/images/projects/proj_4.png', '4', '7.450,-', 'https://maxserv.com');
+add_project('/images/projects/proj_5.png', '5', '5.450,-', 'https://maxserv.com');
+add_project('/images/projects/proj_6.png', '6', '7.000,-', 'https://maxserv.com');
+add_project('/images/projects/proj_7.png', '7', '3.450,-', 'https://maxserv.com');
+add_project('/images/projects/proj_8.png', '8', '5.400,-', 'https://maxserv.com');

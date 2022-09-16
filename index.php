@@ -7,8 +7,8 @@
 */
 session_start();
 $lang = (empty($_SESSION['lang']) ? 'nl' : $_SESSION['lang']);
-include "/Users/tibom/maxserv/Opdracht1_website/src/variables/variables_$lang.php";
-
+include "src/variables/variables_$lang.php";
+$_SESSION['curpage'] = 'homepage';
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -26,22 +26,22 @@ include "/Users/tibom/maxserv/Opdracht1_website/src/variables/variables_$lang.ph
 
     <!-- ### Eigen links ### -->
     <!-- css -->
-    <link rel="stylesheet" href="/Opdracht1_website/sass/style.css">
+    <link rel="stylesheet" href="sass/style.css">
     <!-- js -->
-    <script src="/Opdracht1_website/js/main.js" defer></script>
+    <script src="js/main.js" defer></script>
     <!-- icon -->
     <link rel="shortcut icon" href="images/lorem-logo.png">
 </head>
 
-<body>
+<body class="<?= (empty($_SESSION['contrast_active'])) ? '' : ($_SESSION['contrast_active'] ? 'custom-bg-darkgray' : '') ?>">
 <div class="body-2 container-lg container-fluid">
-    <?php include '/Users/tibom/maxserv/Opdracht1_website/src/overlays.html'; ?>
-    <?php include '/Users/tibom/maxserv/Opdracht1_website/src/nav.php'; ?>
-    <?php include '/Users/tibom/maxserv/Opdracht1_website/src/articles/intro.php'; ?>
-    <?php include '/Users/tibom/maxserv/Opdracht1_website/src/projects/projects.php'; ?>
-    <?php include '/Users/tibom/maxserv/Opdracht1_website/src/articles/articles_container.php'; ?>
-    <?php include '/Users/tibom/maxserv/Opdracht1_website/src/footer_links.php' ?>
-    <?php include '/Users/tibom/maxserv/Opdracht1_website/src/footer.php' ?>
+    <?php include 'src/overlays.html'; ?>
+    <?php include 'src/nav.php'; ?>
+    <?php include 'src/articles/intro.php'; ?>
+    <?php include 'src/projects/projects.php'; ?>
+    <?php include 'src/articles/articles_container.php'; ?>
+    <?php include 'src/footer_links.php' ?>
+    <?php include 'src/footer.php' ?>
 </div>
 </body>
 
