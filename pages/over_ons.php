@@ -8,7 +8,6 @@
 session_start();
 $lang = (empty($_SESSION['lang']) ? 'nl' : $_SESSION['lang']);
 include "/Users/tibom/maxserv/Opdracht1_website/src/variables/variables_$lang.php";
-
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -35,15 +34,27 @@ include "/Users/tibom/maxserv/Opdracht1_website/src/variables/variables_$lang.ph
 
 <body>
 <div class="body-2 container-lg container-fluid">
+    <!-- overlay, popup -->
     <?php include '/Users/tibom/maxserv/Opdracht1_website/src/overlays.html'; ?>
+    <!-- logo, menu, lang-select -->
     <?php include '/Users/tibom/maxserv/Opdracht1_website/src/nav.php'; ?>
-    <?php include '/Users/tibom/maxserv/Opdracht1_website/src/articles/intro.php'; ?>
-    <?php include '/Users/tibom/maxserv/Opdracht1_website/src/projects/projects.php'; ?>
-    <?php include '/Users/tibom/maxserv/Opdracht1_website/src/articles/articles_container.php'; ?>
+    <div class="container mt-5">
+        <article class="p-5 pb-0">
+            <h1>Deze pagina bestaat nog niet!</h1>
+            <div class="d-flex">
+                <img style="transform: translateY(10%)" class="mt-5" src="/maxserv/Opdracht1_website/images/page_does_not_exist.png"
+                     alt="">
+                <h4 class="align-self-center justify-self-center text-center mx-auto">
+                    Oeps...
+                </h4>
+            </div>
+        </article>
+    </div>
+    <!--  links at bottom -->
     <?php include '/Users/tibom/maxserv/Opdracht1_website/src/footer_links.php' ?>
+    <!-- logo with copyright -->
     <?php include '/Users/tibom/maxserv/Opdracht1_website/src/footer.php' ?>
 </div>
 </body>
 
 </html>
-

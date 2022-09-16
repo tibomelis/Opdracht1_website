@@ -1,63 +1,11 @@
 <?php
-// boolean
-// session_start();
-$_SESSION["contrast_active"] = (empty($_SESSION["contrast_active"]) ? false : $_SESSION["contrast_active"]);
-
-// Meertalige navigatie
-$nav_lang = array(
-    'nl' => array('Thuispagina', 'Over ons', 'Projecten', 'contact'),
-    'en' => array('Homepage', 'About us', 'Projects', 'Contact')
-);
-
-/*
-$lang = 'nl';
-// Hoofdnavigatie
-$nav =
-"
-<div class='d-flex d-lg-none'>
-    <div class='ms-1 dropdown'>
-        <button class='btn dropdown-toggle show' type='button' data-bs-toggle='dropdown' aria-expanded='true'>
-        Menu
-        </button>
-        <ul class='dropdown-menu' data-popper-placement='bottom-start'>
-        <li><a class='dropdown-item' href='https://maxserv.com'>".$nav_lang[$lang][0]."</a></li>
-        <li><a class='dropdown-item' href='https://maxserv.com'>".$nav_lang[$lang][1]."</a></li>
-        <li><a class='dropdown-item' href='https://maxserv.com'>".$nav_lang[$lang][2]."</a></li>
-        <li><a class='dropdown-item' href='https://maxserv.com'>".$nav_lang[$lang][3]."</a></li>
-        </ul>
-    </div>
-    <a class='ms-1 align-self-center text-black text-center hover-pointer' onclick='toggle_contrast()'>Toggle contrast</a>
-</div>
-";
-*/
-
-
+$homepage = '/maxserv/Opdracht1_website/index.php';
 // Logo header en footer
-$logo = '/Opdracht1_website/images/lorem-logo.png';
-
-//echo "<img src='$logo' alt='Lorem Logo'>";
-
-
-// [x][0] title [x][1][y] = link
-//$footer_nav = [
-//    ['Inspiratie', ['Medium', 'Designerdepot', 'Portfolio']],
-//    ['Service', ['Over ons', 'Contact', 'Servicepunten']],
-//    ['Informatie', ['Github', 'Atlassian', 'Slack']]
-//];
-//function footer_link($content) {return "<a class='text-body' href='https://maxserv.com'>$content</a>";}
-//function footer_link_title($content) {return "<p class='bold'>$content</p>";}
-
-/*
-foreach ($footer_nav as $column) {
-    echo footer_link_title($column[0]);
-    foreach ($column[1] as $link) {
-        echo footer_link($link);
-    }
-}
-*/
+$logo = '/maxserv/Opdracht1_website/images/lorem-logo.png';
 
 // "Ontdek al onze projecten" met bijbehorende tekst
-$intro_title = 'Ontdek al onze projecten';
+$intro_title = 'Ontdek al';
+$intro_title_boldpart = 'onze projecten';
 $intro_txt = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique cumque quaerat deleniti veniam qui odit porro, officia vero tempore nobis laboriosam veritatis. Perspiciatis eveniet cumque similique sunt tenetur ullam ut laboriosam maiores? Debitis, ipsum suscipit perferendis a illo inventore deserunt.';
 
 // "Meer informatie nodig?" met bijbehorende tekst
@@ -79,5 +27,15 @@ $ideas_txt = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fac
 
 */
 
-$copyright_txt = 'Copyright &copy; 2018';
-$load_projects_txt = 'Meer projecten laden';
+$copyright_txt = 'Alle rechten voorbehouden';
+$load_projects_txt = 'MEER PROJECTEN LADEN';
+
+$footer_nav_links = [
+    ['Inspiratie', ['Medium', 'Designerdepot', 'Portfolio']],
+    ['Service', ['Over ons', 'Contact', 'Servicepunten']],
+    ['Informatie', ['Github', 'Atlassian', 'Slack']]
+];
+
+$bottom_page_links = ['Voorwaarden', 'Siteplan', 'Afmelden'];
+
+$back_button_txt = 'TERUG';

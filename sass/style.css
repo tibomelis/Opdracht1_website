@@ -17,6 +17,7 @@
   content: "";
   background-color: #f6f6f6;
   height: 100%;
+  z-index: -1;
 }
 
 .custom-text-black {
@@ -213,29 +214,25 @@ a {
   opacity: 1;
 }
 
-.hover-pointer:hover {
-  cursor: pointer;
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 100;
-  font-size: 16px;
-}
-
-::selection {
-  background-color: #00b5e8;
-  color: #f6f6f6;
-}
-
-.header {
+.circle-icon {
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
   position: relative;
-  height: 100px;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 50%;
+  transform: rotate(90deg);
 }
-
-.footer {
-  position: relative;
-  height: 125px;
+.circle-icon:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  border: 5px solid transparent;
+  border-bottom: 5px solid rgba(255, 0, 0, 0.25);
+  transform: translateX(-50%) translateY(-85%);
 }
 
 .logo-top {
@@ -262,6 +259,15 @@ body {
   }
 }
 
+.lang-select-hide-btn {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: translateX(25%) scaleX(0.5);
+}
+.lang-select-hide-btn:hover {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  cursor: pointer;
+}
+
 .lang-sel-item {
   font-family: "Raleway", sans-serif;
   color: black;
@@ -274,31 +280,35 @@ body {
   background-color: #00b5e8;
 }
 
+.hover-pointer:hover {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+}
+
+::selection {
+  background-color: #00b5e8;
+  color: #f6f6f6;
+}
+
+.header {
+  position: relative;
+  height: 100px;
+}
+
+.footer {
+  position: relative;
+  height: 125px;
+}
+
 h1 {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 31px;
-}
-
-.circle-icon {
-  margin-left: 10px;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  width: 25px;
-  height: 25px;
-  background: #fff;
-  border-radius: 50%;
-  transform: rotate(90deg);
-}
-.circle-icon:after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  border: 5px solid transparent;
-  border-bottom: 5px solid rgba(255, 0, 0, 0.25);
-  transform: translateX(-50%) translateY(-85%);
 }
 
 /*# sourceMappingURL=style.css.map */

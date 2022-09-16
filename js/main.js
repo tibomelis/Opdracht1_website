@@ -1,10 +1,10 @@
 const toggle = (input) => {
-    elem = input.classList;
+    let elem = input.classList;
     elem.contains('d-block') ? elem.replace('d-block', 'd-none') : elem.replace('d-none', 'd-block')
 }
 
 function toggle_contrast() {
-    var _body = document.body.classList
+    let _body = document.body.classList
     if (_body.contains('custom-bg-darkgray')) {
         _body.remove('custom-bg-darkgray')
     } else {
@@ -13,32 +13,44 @@ function toggle_contrast() {
 
 }
 
-function findSibling(curelem, clsname) {
-    if (curelem.parentElement.classList.contains('popup-trigger')) {
-        if (curelem.classList.contains(clsname)) {
-            return curelem;
-        } else {
-            return findSibling(curelem.previousSibling, clsname);
-        }
+function navigate(elem) {
+    if (elem.classList.contains('hover-img')) {
+        return elem.getElementsByClassName('project-img').item(0).src
     } else {
-        return findSibling(curelem.parentNode, clsname);
+        return navigate(elem.parentElement)
     }
 }
 
-function show(self) {
-    var _popup_win = document.getElementsByClassName('popup-container').item(0)
-    var _popup_img = document.getElementsByClassName('popup-img').item(0)
-    var _clicked = self.target
-    _popup_img.src = findSibling(_clicked, 'project-img').src
+function show_popup(self) {
+    let _popup_win = document.getElementsByClassName('popup-container').item(0)
+    let _popup_img = document.getElementsByClassName('popup-img').item(0)
+    _popup_img.src = navigate(self.target)
     toggle(_popup_win)
 }
 
-function hide() {
+function hide_popup() {
     toggle(document.getElementsByClassName('popup-container').item(0))
 }
 
-var elements = document.getElementsByClassName('hover-img');
+const hover_img_trigger = document.getElementsByClassName('hover-img');
 
-for (let i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('click', show);
+for (let i = 0; i < hover_img_trigger.length; i++) {
+    hover_img_trigger[i].addEventListener('click', show_popup);
+}
+
+function toggle_lang_sel() {
+    let items = document.querySelectorAll('.lang-sel .hide-able')
+    let toggler = document.getElementsByClassName('lang-select-hide-btn').item(0)
+    if (items[0].classList.contains('d-none')) {
+        toggler.textContent = '>'
+        for (let i = 0; i < items.length; i++) {
+            items[i].classList.replace('d-none', 'd-block')
+        }
+    } else {
+        toggler.textContent = '<'
+        for (let i = 0; i < items.length; i++) {
+            items[i].classList.replace('d-block', 'd-none')
+        }
+    }
+
 }

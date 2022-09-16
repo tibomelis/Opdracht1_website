@@ -1,9 +1,5 @@
 <?php
-$footer_nav_links = [
-    ['Inspiratie', ['Medium', 'Designerdepot', 'Portfolio']],
-    ['Service', ['Over ons', 'Contact', 'Servicepunten']],
-    ['Informatie', ['Github', 'Atlassian', 'Slack']]
-];
+
 ?>
 <div class="container-fluid custom-bg-gray mt-5 py-5 px-1 px-lg-5">
     <div class="container pb-4">

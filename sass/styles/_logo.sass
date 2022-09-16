@@ -1,0 +1,18 @@
+.logo
+  &-top
+    z-index: 1
+    width: auto
+    height: 100px
+    transform: translate(0, 20px)
+    @include if-size('sm')
+      height: 210px
+      transform: translate(0, -25%)
+
+
+  &-bottom
+    @include if-size('sm')
+      height: 120px
+      width: 120px
+      transform: translate(0, -50%)
+    height: 100px
+    width: 100px

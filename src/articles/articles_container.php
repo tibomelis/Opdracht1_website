@@ -1,15 +1,35 @@
 <div>
     <div class="container-fluid custom-bg-gray">
-        <?php include '/Users/tibom/maxserv/Opdracht1_website/src/articles/top.html' ?>
+        <article class="ms-3 p-4">
+            <h1><?= $more_inf_title ?></h1>
+            <p>
+                <?= $more_inf_txt ?>
+            </p>
+        </article>
     </div>
     <div class="container-fluid p-5 pb-0">
         <div class="row">
             <div class="col-12 col-lg-6">
-                <?php include '/Users/tibom/maxserv/Opdracht1_website/src/articles/bottom_left.html' ?>
+                <article>
+                    <h1><?= $wow_effect_title ?></h1>
+                    <p>
+                        <?= $wow_effect_txt ?>
+                    </p>
+                </article>
             </div>
             <div class="col-12 col-lg-6">
-                <?php include '/Users/tibom/maxserv/Opdracht1_website/src/articles/bottom_right_top.html' ?>
-                <?php include '/Users/tibom/maxserv/Opdracht1_website/src/articles/bottom_right_bottom.php' ?>
+                <article>
+                    <h1><?= $quality_proj_title ?></h1>
+                    <p>
+                        <?= $quality_proj_txt ?>
+                    </p>
+                </article>
+                <article>
+                    <h1><?= $ideas_title ?></h1>
+                    <p>
+                        <?= $ideas_txt ?>
+                    </p>
+                </article>
             </div>
         </div>
     </div>
