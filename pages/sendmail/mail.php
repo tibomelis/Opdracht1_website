@@ -8,6 +8,9 @@ require 'mail_template.php';
 
 function send_mail($to, $description)
 {
+    $str = file_get_contents('./mail_login.json');
+    $config = json_decode($str, true);
+
     $mail = new PHPMailer();
     //connect to server
     $mail->isSMTP();
@@ -18,8 +21,8 @@ function send_mail($to, $description)
     $mail->SMTPAuth = true;
 
     //log in
-    $mail->Username = 'heyitstibo@gmail.com';
-    $mail->Password = 'gzhbucfvnmmgmgcs';
+    $mail->Username = $config['mail'];
+    $mail->Password = $config['password'];
 
     //mail stuff
     $mail->setFrom('heyitstibo@gmail.com', 'Tibo Melis');
