@@ -1,0 +1,3 @@
+# ignore these files:
+/pages/sendmail/config.json;
+.idea;
