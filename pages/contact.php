@@ -41,19 +41,53 @@ $_SESSION['curpage'] = 'contact';
     <?php include '../src/nav.php'; ?>
     <div class="p-3"></div>
     <div class="container mt-5 custom-bg-gray p-5">
-        <form action="../pages/send_email.php" method="post">
-            <p>
-                <label for=""><?= $contact_form['emailtxt'] ?> </label>
-                <input name="_email" type="email" placeholder="<?= $contact_form['emailexample'] ?>" required>
-            </p>
-            <p>
-                <label for=""><?= $contact_form['summarytxt'] ?> </label>
-                <input name="_text" type="text" placeholder="<?= $contact_form['summaryplaceholder'] ?>" required maxlength="50"
-                       minlength="5">
-            </p>
-            <p>
-                <input type="submit" value="<?= $contact_form['send_btn'] ?>">
-            </p>
+        <form action="sendmail/send_email.php" method="post">
+            <table>
+                <tr>
+                    <td>
+                        <label><?= $contact_form['fnametxt'] ?></label>
+                    </td>
+                    <td>
+                        <input name="_fname" type="text" placeholder="<?= $contact_form['fnameplh'] ?>" required maxlength="20">
+                    </td>
+                    <td>
+                        <input name="_lname" type="text" placeholder="<?= $contact_form['lnameplh'] ?>">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><?= $contact_form['emailtxt'] ?> </label>
+                    </td>
+                    <td>
+                        <input name="_email" type="email" placeholder="<?= $contact_form['emailexample'] ?>" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><?= $contact_form['phonetxt'] ?> </label>
+                    </td>
+                    <td>
+                        <input name="_phone" type="text" placeholder="<?= $contact_form['phoneplh'] ?>" required minlength="10">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><?= $contact_form['summarytxt'] ?> </label>
+                    </td>
+                    <td>
+                        <input name="_sumry" type="text" placeholder="<?= $contact_form['summaryplaceholder'] ?>" maxlength="50"
+                               minlength="5">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="<?= $contact_form['send_btn'] ?>">
+                    </td>
+                </tr>
+            </table>
         </form>
         <a href="javascript: (() => { history.back();})();">Terug</a></div>
     <!--  links at bottom -->

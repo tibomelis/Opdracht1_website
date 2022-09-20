@@ -108,9 +108,18 @@ add_project('/images/projects/proj_7.png', '7', '3.450,-', 'https://maxserv.com'
 add_project('/images/projects/proj_8.png', '8', '5.400,-', 'https://maxserv.com');
 
 $contact_form = [
+    'fnametxt' => 'Your name:',
+    'fnameplh' => 'First name',
+    'lnameplh' => 'Last name (not required)',
+
     'emailtxt' => 'Your mail-addres: ',
     'emailexample' => 'example@example.com',
-    'summarytxt' => 'Short summary of the reason for contact',
+
+    'phonetxt' => 'Your phonenumber',
+    'phoneplh' => '0123456789',
+
+    'summarytxt' => 'Short summary of the reason for contact: ',
     'summaryplaceholder' => '5-50 characters',
+
     'send_btn' => 'Send!'
 ];
