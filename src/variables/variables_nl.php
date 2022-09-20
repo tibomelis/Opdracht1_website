@@ -25,9 +25,29 @@ $copyright_txt = 'Alle rechten voorbehouden';
 $load_projects_txt = 'MEER PROJECTEN LADEN';
 
 $footer_nav_links = [
-    ['Inspiratie', ['Medium', 'Designerdepot', 'Portfolio']],
-    ['Service', ['Over ons', 'Contact', 'Servicepunten']],
-    ['Informatie', ['Github', 'Atlassian', 'Slack']]
+    ['txt' => 'Inspiratie', 'links' =>
+        [
+            ['txt' => 'Medium', 'link' => 'https://maxserv.com'],
+            ['txt' => 'Designerdepot', 'link' => 'https://maxserv.com'],
+            ['txt' => 'Portfolio', 'link' => 'https://maxserv.com']
+        ]
+    ],
+    [
+        'txt' => 'Service', 'links' =>
+        [
+            ['txt' => 'Over ons', 'link' => '../../pages/over_ons.php'],
+            ['txt' => 'Contact', 'link' => '../../pages/contact.php'],
+            ['txt' => 'Servicepunten', 'link' => 'https://maxserv.com']
+        ]
+    ],
+    [
+        'txt' => 'Informatie', 'links' =>
+        [
+            ['txt' => 'Github', 'link' => 'https://maxserv.com'],
+            ['txt' => 'Atlassian', 'link' => 'https://maxserv.com'],
+            ['txt' => 'Slack', 'link' => 'https://maxserv.com']
+        ]
+    ]
 ];
 
 $bottom_page_links = ['Voorwaarden', 'Siteplan', 'Afmelden'];
@@ -86,3 +106,11 @@ add_project('/images/projects/proj_5.png', '5', '5.450,-', 'https://maxserv.com'
 add_project('/images/projects/proj_6.png', '6', '7.000,-', 'https://maxserv.com');
 add_project('/images/projects/proj_7.png', '7', '3.450,-', 'https://maxserv.com');
 add_project('/images/projects/proj_8.png', '8', '5.400,-', 'https://maxserv.com');
+
+$contact_form = [
+    'emailtxt' => 'Uw mail-addres: ',
+    'emailexample' => 'voorbeeld@voorbeeld.com',
+    'summarytxt' => 'Korte samenvatting van reden voor contact:',
+    'summaryplaceholder' => '5-50 karakters',
+    'send_btn' => 'Versturen!'
+];

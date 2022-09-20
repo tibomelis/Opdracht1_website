@@ -25,9 +25,29 @@ $copyright_txt = 'All rights reserved';
 $load_projects_txt = 'LOAD MORE PROJECTS';
 
 $footer_nav_links = [
-    ['Inspiration', ['Medium', 'Designer-depot', 'Portfolio']],
-    ['Service', ['About us', 'Contact', 'Service-points']],
-    ['Information', ['Github', 'Atlassian', 'Slack']]
+    ['txt' => 'Inspiration', 'links' =>
+        [
+            ['txt' => 'Medium', 'link' => 'https://maxserv.com'],
+            ['txt' => 'Designer-depot', 'link' => 'https://maxserv.com'],
+            ['txt' => 'Portfolio', 'link' => 'https://maxserv.com']
+        ]
+    ],
+    [
+        'txt' => 'Service', 'links' =>
+        [
+            ['txt' => 'About us', 'link' => '../../pages/over_ons.php'],
+            ['txt' => 'Contact', 'link' => '../../pages/contact.php'],
+            ['txt' => 'Service-points', 'link' => 'https://maxserv.com']
+        ]
+    ],
+    [
+        'txt' => 'Information', 'links' =>
+        [
+            ['txt' => 'Github', 'link' => 'https://maxserv.com'],
+            ['txt' => 'Atlassian', 'link' => 'https://maxserv.com'],
+            ['txt' => 'Slack', 'link' => 'https://maxserv.com']
+        ]
+    ]
 ];
 
 $bottom_page_links = ['Terms and conditions', 'Sitemap', 'Log out'];
@@ -86,3 +106,11 @@ add_project('/images/projects/proj_5.png', '5', '5.450,-', 'https://maxserv.com'
 add_project('/images/projects/proj_6.png', '6', '7.000,-', 'https://maxserv.com');
 add_project('/images/projects/proj_7.png', '7', '3.450,-', 'https://maxserv.com');
 add_project('/images/projects/proj_8.png', '8', '5.400,-', 'https://maxserv.com');
+
+$contact_form = [
+    'emailtxt' => 'Your mail-addres: ',
+    'emailexample' => 'example@example.com',
+    'summarytxt' => 'Short summary of the reason for contact',
+    'summaryplaceholder' => '5-50 characters',
+    'send_btn' => 'Send!'
+];

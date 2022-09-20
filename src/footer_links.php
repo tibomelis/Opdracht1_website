@@ -7,9 +7,9 @@
             <?php
             foreach ($footer_nav_links as $column) {
                 echo "<div class='col-12 col-sm-2 mx-4 d-sm-block text-md-start text-center'>";
-                echo "<p class='bold'>$column[0]</p>";
-                foreach ($column[1] as $link)
-                    echo "<a class='text-body' href='https://maxserv.com'><p>$link</p></a>";
+                echo "<p class='bold'>" . $column['txt'] . "</p>";
+                foreach ($column['links'] as $link)
+                    echo "<a class='text-body' href='" . $link['link'] . "'><p>" . $link['txt'] . "</p></a>";
                 echo "</div>";
             }
             ?>
