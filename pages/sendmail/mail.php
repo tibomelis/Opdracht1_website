@@ -8,7 +8,7 @@ require 'mail_template.php';
 
 function send_mail($to, $description)
 {
-    $str = file_get_contents('./mail_login.json');
+    $str = file_get_contents('./config.json');
     $config = json_decode($str, true);
 
     $mail = new PHPMailer();
