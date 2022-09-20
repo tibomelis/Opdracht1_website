@@ -1,4 +1,8 @@
 {
   "mail": "heyitstibo@gmail.com",
-  "password": "gzhbucfvnmmgmgcs"
+  "password": "gzhbucfvnmmgmgcs",
+  "smtp": {
+    "port": 465,
+    "host": "smtp.gmail.com"
+  }
 }

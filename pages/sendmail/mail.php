@@ -15,8 +15,8 @@ function send_mail($to, $description)
     //connect to server
     $mail->isSMTP();
     $mail->SMTPDebug = SMTP::DEBUG_OFF;
-    $mail->Host = 'smtp.gmail.com';
-    $mail->Port = 465;
+    $mail->Host = $config['smtp']['host'];
+    $mail->Port = $config['smtp']['port'];
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->SMTPAuth = true;
 
