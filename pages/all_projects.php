@@ -42,7 +42,7 @@ $_SESSION['curpage'] = 'all_projects';
         <?php include '../src/nav.php'; ?>
     </div>
     <!-- kitchen images -->
-    <?php include '../src/projects/all_projects.php'; ?>
+    <?php include '../src/projects_include/all_projects.php'; ?>
     <!--  links at bottom -->
     <?php include '../src/footer_links.php' ?>
     <!-- logo with copyright -->

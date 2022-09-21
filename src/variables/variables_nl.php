@@ -23,7 +23,7 @@ $ideas_txt = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fac
 
 $copyright_txt = 'Alle rechten voorbehouden';
 $load_projects_txt = 'MEER PROJECTEN LADEN';
-
+$hide_projects_txt = 'VERBERG PROJECTEN';
 $footer_nav_links = [
     ['txt' => 'Inspiratie', 'links' =>
         [
@@ -69,6 +69,16 @@ add_project('/images/projects/proj_5.png', '5', '5.450,-', 'https://maxserv.com'
 add_project('/images/projects/proj_6.png', '6', '7.000,-', 'https://maxserv.com');
 add_project('/images/projects/proj_7.png', '7', '3.450,-', 'https://maxserv.com');
 add_project('/images/projects/proj_8.png', '8', '5.400,-', 'https://maxserv.com');
+add_project('/images/projects/proj_9.png', '8', '2.000,-', 'https://maxserv.com');
+add_project('/images/projects/proj_10.png', '8', '4.500,-', 'https://maxserv.com');
+add_project('/images/projects/proj_11.png', '8', '2.300,-', 'https://maxserv.com');
+add_project('/images/projects/proj_12.png', '8', '4.420,-', 'https://maxserv.com');
+add_project('/images/projects/proj_13.png', '8', '7.300,-', 'https://maxserv.com');
+add_project('/images/projects/proj_14.png', '8', '3.300,-', 'https://maxserv.com');
+add_project('/images/projects/proj_15.png', '8', '4.430,-', 'https://maxserv.com');
+add_project('/images/projects/proj_16.png', '8', '5.999,-', 'https://maxserv.com');
+add_project('/images/projects/proj_17.png', '8', '4.600,-', 'https://maxserv.com');
+add_project('/images/projects/proj_18.png', '8', '5.450,-', 'https://maxserv.com');
 
 $contact_form = [
     'fnametxt' => 'Uw naam:',
@@ -86,3 +96,14 @@ $contact_form = [
 
     'send_btn' => 'Versturen!'
 ];
+
+$nav_lang = array(
+    'en' => array('Homepage', 'About us', 'Projects', 'Contact')
+);
+$curpage = (empty($_SESSION['curpage']) ? 'homepage' : $_SESSION['curpage']);
+$nav_items = array(
+    ['title' => 'Thuispagina', 'href' => '/index.php', 'selected' => ($curpage == 'homepage')],
+    ['title' => 'Over ons', 'href' => '/pages/over_ons.php', 'selected' => ($curpage == 'over_ons')],
+    ['title' => 'Projecten', 'href' => '/pages/all_projects.php', 'selected' => ($curpage == 'all_projects')],
+    ['title' => 'Contact', 'href' => '/pages/contact.php', 'selected' => ($curpage == 'contact')]
+);
