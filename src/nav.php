@@ -1,20 +1,5 @@
 <?php
-
-$nav_lang = array(
-    'nl' => array('Thuispagina', 'Over ons', 'Projecten', 'Contact'),
-    'en' => array('Homepage', 'About us', 'Projects', 'Contact')
-);
-
 $lang = (empty($_SESSION['lang']) ? 'nl' : $_SESSION['lang']);
-$curpage = (empty($_SESSION['curpage']) ? 'homepage' : $_SESSION['curpage']);
-
-$nav_items = array(
-    ['title' => $nav_lang[$lang][0], 'href' => '/index.php', 'selected' => ($curpage == 'homepage')],
-    ['title' => $nav_lang[$lang][1], 'href' => '/pages/over_ons.php', 'selected' => ($curpage == 'over_ons')],
-    ['title' => $nav_lang[$lang][2], 'href' => '/pages/all_projects.php', 'selected' => ($curpage == 'all_projects')],
-    ['title' => $nav_lang[$lang][3], 'href' => '/pages/contact.php', 'selected' => ($curpage == 'contact')]
-);
-
 $lang_sel_display = (empty($_SESSION['lang_sel_display']) ? 'block' : $_SESSION['lang_sel_display']);
 $lang_sel_toggler = (empty($_SESSION['lang_sel_toggler']) ? '>' : $_SESSION['lang_sel_toggler']);
 $contrast_active = (empty($_SESSION['contrast_active']) ? false : $_SESSION['contrast_active']);
@@ -48,18 +33,19 @@ $contrast_active = (empty($_SESSION['contrast_active']) ? false : $_SESSION['con
                             Menu
                         </button>
                         <ul class="dropdown-menu" data-popper-placement="bottom-start">
-                            <?php foreach ($nav_items as $nav_item):?>
+                            <?php foreach ($nav_items as $nav_item): ?>
                                 <li><a class="dropdown-item" href="<?= $nav_item['href'] ?>"><?= $nav_item['title'] ?></a></li>
-                            <?php endforeach;?>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
                     <a class="ms-1 align-self-center text-black hover-pointer contrast-toggler-<?= ($contrast_active ? 'black' : 'white') ?>"
                        href="/pages/toggle.php?toggle=contrast"></a>
                 </div>
                 <div class="d-none d-lg-block">
-                    <?php foreach ($nav_items as $nav_item):?>
-                        <a class="p-3 mx-0 menu-link <?= ($nav_item['selected'] ? ' selected' : '') ?>" href="<?= $nav_item['href'] ?>"><?= $nav_item['title'] ?></a>
-                    <?php endforeach;?>
+                    <?php foreach ($nav_items as $nav_item): ?>
+                        <a class="p-3 mx-0 menu-link <?= ($nav_item['selected'] ? ' selected' : '') ?>"
+                           href="<?= $nav_item['href'] ?>"><?= $nav_item['title'] ?></a>
+                    <?php endforeach; ?>
                     |
                     <a class="ms-1 me-5 align-self-center text-black hover-pointer contrast-toggler-<?= ($contrast_active ? 'black' : 'white')
                     ?>" href="/pages/toggle.php?toggle=contrast"></a>
