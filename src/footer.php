@@ -5,12 +5,12 @@
         <img class="border logo-bottom" src="<?= $logo; ?>" alt="lorem-logo">
         <p class="justify-self-center p-sm-3 p-s-2 text-center"><?= $copyright_txt ?></p>
     </div>
-    <div class="d-sm-flex mb-5 text-md-start text-center">
+    <div class="d-flex flex-column flex-sm-row mb-5 text-md-start text-center">
         <div class="mx-2"></div>
         <a class="text-black" href="https://maxserv.com"><?= $bottom_page_links[0] ?></a>
-        <p class="mx-2 d-sm-block d-none">|</p>
+        <p class="mx-2 d-none d-sm-block">|</p>
         <a class="text-black" href="https://maxserv.com"><?= $bottom_page_links[1] ?></a>
-        <p class="mx-2 d-sm-block d-none">|</p>
+        <p class="mx-2 d-none d-sm-block">|</p>
         <a class="text-black" href="https://maxserv.com"><?= $bottom_page_links[2] ?></a>
     </div>
 </div>
