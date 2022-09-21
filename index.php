@@ -11,7 +11,7 @@ include "src/variables/variables_$lang.php";
 $_SESSION['curpage'] = 'homepage';
 ?>
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="<?= $lang ?>">
 
 <head>
     <title>Lorem</title>

@@ -48,31 +48,20 @@ $contrast_active = (empty($_SESSION['contrast_active']) ? false : $_SESSION['con
                             Menu
                         </button>
                         <ul class="dropdown-menu" data-popper-placement="bottom-start">
-                            <?php
-                            for ($i = 0; $i < sizeof($nav_items); $i++) {
-                                echo '<li><a class="dropdown-item" href="' . $nav_items[$i]['href'] . '">' . $nav_items[$i]['title'] . '</a></li>';
-                            }
-
-                            ?>
+                            <?php foreach ($nav_items as $nav_item):?>
+                                <li><a class="dropdown-item" href="<?= $nav_item['href'] ?>"><?= $nav_item['title'] ?></a></li>
+                            <?php endforeach;?>
                         </ul>
                     </div>
                     <a class="ms-1 align-self-center text-black hover-pointer contrast-toggler-<?= ($contrast_active ? 'black' : 'white') ?>"
                        href="/pages/toggle.php?toggle=contrast"></a>
                 </div>
                 <div class="d-none d-lg-block">
-                    <?php
-                    for ($i = 0; $i < sizeof($nav_items); $i++) {
-                        $item = '<a class="p-3 mx-0 menu-link';
-                        if ($nav_items[$i]['selected']) {
-                            $item .= ' selected';
-                        }
-                        $item .= '" href="' . $nav_items[$i]['href'] . '">' .
-                            $nav_items[$i]['title'] . '</a>';
-                        echo $item;
-                    }
-                    ?>
+                    <?php foreach ($nav_items as $nav_item):?>
+                        <a class="p-3 mx-0 menu-link <?= ($nav_item['selected'] ? ' selected' : '') ?>" href="<?= $nav_item['href'] ?>"><?= $nav_item['title'] ?></a>
+                    <?php endforeach;?>
                     |
-                    <a class="ms-1 align-self-center text-black hover-pointer contrast-toggler-<?= ($contrast_active ? 'black' : 'white')
+                    <a class="ms-1 me-5 align-self-center text-black hover-pointer contrast-toggler-<?= ($contrast_active ? 'black' : 'white')
                     ?>" href="/pages/toggle.php?toggle=contrast"></a>
                 </div>
             </nav>

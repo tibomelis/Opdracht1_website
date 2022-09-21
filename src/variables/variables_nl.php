@@ -60,43 +60,6 @@ function add_project($src, $name, $price, $href)
     $projects[] = ['src' => $src, 'name' => $name, 'price' => $price, 'href' => $href];
 }
 
-function get_project($i)
-{
-    global $projects;
-    return get_project_container($i);
-}
-
-function getPriceTag($price)
-{
-    return "
-<div class='pricetag-container'>
-    <div class='top'>
-      <div class='p-1'>PRIJS</div>
-      <div class='price p-1'>$price</div>
-    </div>
-    <div class='bottom'>
-      <div class='left'></div>
-      <div class='right'></div>
-    </div>
-</div>";
-}
-
-function get_project_container($i)
-{
-    global $projects;
-    $_src = $projects[$i]['src'];
-    $_price_tag = getPricetag($projects[$i]['price']);
-    return "<figure class='hover-img p-0'>
-                <a class='popup-trigger'>
-                    <img class='img-fluid project-img' src='$_src' alt='no image? reload page'>
-                    <figcaption>
-                        <p>Ultimate Design <span class='circle-icon'></span></p>
-                    </figcaption>
-                    $_price_tag
-                </a>
-            </figure>";
-}
-
 $projects = [];
 add_project('/images/projects/proj_1.png', '1', '3.500,-', 'https://maxserv.com');
 add_project('/images/projects/proj_2.png', '2', '5.450,-', 'https://maxserv.com');
