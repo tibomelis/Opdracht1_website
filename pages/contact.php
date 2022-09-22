@@ -50,6 +50,9 @@ include "../src/variables/variables_$lang.php";
                     <td>
                         <input name="_fname" type="text" placeholder="<?= $contact_form['fnameplh'] ?>" required maxlength="20">
                     </td>
+                </tr>
+                <tr>
+                    <td></td>
                     <td>
                         <input name="_lname" type="text" placeholder="<?= $contact_form['lnameplh'] ?>">
                     </td>
@@ -81,11 +84,8 @@ include "../src/variables/variables_$lang.php";
                 </tr>
                 <tr>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <input type="submit" value="<?= $contact_form['send_btn'] ?>">
-                    </td>
+                    <td><p><?= $contact_form['requiredtxt'] ?></p></td>
+                    <td><input type="submit" value="<?= $contact_form['send_btn'] ?>"></td>
                 </tr>
             </table>
         </form>

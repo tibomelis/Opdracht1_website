@@ -81,18 +81,20 @@ add_project('/images/projects/proj_17.png', '8', '4.600,-', 'https://maxserv.com
 add_project('/images/projects/proj_18.png', '8', '5.450,-', 'https://maxserv.com');
 
 $contact_form = [
+    'requiredtxt' => '* = verplicht',
+
     'fnametxt' => 'Uw naam:',
-    'fnameplh' => 'Voornaam',
-    'lnameplh' => 'Achternaam (niet "verplicht")',
+    'fnameplh' => '* Voornaam',
+    'lnameplh' => 'Achternaam',
 
     'emailtxt' => 'Uw mail-addres: ',
-    'emailexample' => 'voorbeeld@voorbeeld.com',
+    'emailexample' => '* voorbeeld@voorbeeld.com',
 
     'phonetxt' => 'Uw telefoonnummer',
-    'phoneplh' => '0123456789',
+    'phoneplh' => '* 0123456789',
 
     'summarytxt' => 'Korte samenvatting van reden voor contact: ',
-    'summaryplaceholder' => '5-50 karakters',
+    'summaryplaceholder' => '* 5-50 karakters',
 
     'send_btn' => 'Versturen!'
 ];
