@@ -35,7 +35,7 @@ $footer_nav_links = [
     [
         'txt' => 'Service', 'links' =>
         [
-            ['txt' => 'About us', 'link' => '../../pages/over_ons.php'],
+            ['txt' => 'About us', 'link' => '../../pages/about_us.php'],
             ['txt' => 'Contact', 'link' => '../../pages/contact.php'],
             ['txt' => 'Service-points', 'link' => 'https://maxserv.com']
         ]
@@ -137,7 +137,7 @@ $contact_form = [
 $curpage = (empty($_SESSION['curpage']) ? 'homepage' : $_SESSION['curpage']);
 $nav_items = array(
     ['title' => 'Homepage', 'href' => '/index.php', 'selected' => ($curpage == 'homepage')],
-    ['title' => 'About us', 'href' => '/pages/over_ons.php', 'selected' => ($curpage == 'over_ons')],
+    ['title' => 'About us', 'href' => '/pages/about_us.php', 'selected' => ($curpage == 'over_ons')],
     ['title' => 'Projects', 'href' => '/pages/all_projects.php', 'selected' => ($curpage == 'all_projects')],
     ['title' => 'Contact', 'href' => '/pages/contact.php', 'selected' => ($curpage == 'contact')]
 );

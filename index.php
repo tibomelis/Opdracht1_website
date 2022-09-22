@@ -35,7 +35,7 @@ $_SESSION['curpage'] = 'homepage';
 
 <body class="<?= (empty($_SESSION['contrast_active'])) ? '' : ($_SESSION['contrast_active'] ? 'custom-bg-darkgray' : '') ?>">
 <div class="body-2 container-lg container-fluid">
-    <?php include 'src/overlays.html'; ?>
+    <?php include 'src/overlays.php'; ?>
     <?php include 'src/nav.php'; ?>
     <?php include 'src/texts/intro.php'; ?>
     <?php include 'src/projects_include/projects.php'; ?>

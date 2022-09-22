@@ -36,7 +36,7 @@ $_SESSION['curpage'] = 'over_ons';
 <body class="<?= (empty($_SESSION['contrast_active'])) ? '' : ($_SESSION['contrast_active'] ? 'custom-bg-darkgray' : '') ?>">
 <div class="body-2 container-lg container-fluid">
     <!-- overlay, popup -->
-    <?php include '../src/overlays.html'; ?>
+    <?php include '../src/overlays.php'; ?>
     <!-- logo, menu, lang-select -->
     <?php include '../src/nav.php'; ?>
     <div class="container mt-5">

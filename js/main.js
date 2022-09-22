@@ -3,15 +3,6 @@ const toggle = (input) => {
     elem.contains('d-block') ? elem.replace('d-block', 'd-none') : elem.replace('d-none', 'd-block')
 }
 
-// function toggle_contrast() {
-//     let _body = document.body.classList
-//     if (_body.contains('custom-bg-darkgray')) {
-//         _body.remove('custom-bg-darkgray')
-//     } else {
-//         _body.add('custom-bg-darkgray')
-//     }
-// }
-
 function navigate(elem) {
     if (elem.classList.contains('hover-img')) {
         return elem.getElementsByClassName('project-img').item(0).src
@@ -37,19 +28,17 @@ for (let i = 0; i < hover_img_trigger.length; i++) {
     hover_img_trigger[i].addEventListener('click', show_popup);
 }
 
-// function toggle_lang_sel() {
-//     let items = document.querySelectorAll('.lang-sel .hide-able')
-//     let toggler = document.getElementsByClassName('lang-select-hide-btn').item(0)
-//     if (items[0].classList.contains('d-none')) {
-//         toggler.textContent = '>'
-//         for (let i = 0; i < items.length; i++) {
-//             items[i].classList.replace('d-none', 'd-block')
-//         }
-//     } else {
-//         toggler.textContent = '<'
-//         for (let i = 0; i < items.length; i++) {
-//             items[i].classList.replace('d-block', 'd-none')
-//         }
-//     }
-//
-// }
+const menuBtn = document.querySelector('.menu-btn');
+const menuLinks = document.querySelector('.mobile-menu-popup')
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+    if (!menuOpen) {
+        menuBtn.classList.add('open');
+        menuLinks.classList.add('show');
+        menuOpen = true;
+    } else {
+        menuBtn.classList.remove('open');
+        menuLinks.classList.remove('show');
+        menuOpen = false;
+    }
+})

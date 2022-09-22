@@ -1,9 +1,9 @@
 <?php
-$data = !empty($_GET['request']) ? ($_GET['request']) : 'max_projects=6';
-$data = json_decode(base64_decode($data))->max_projects;
-
-$_SESSION['max_projects'] = $data;
+$data = !empty($_GET['request']) ? (base64_decode($_GET['request'])) : '{"max_projects":"6"}';
+$request = json_decode($data);
+$_SESSION['max_projects'] = $request->max_projects;
 $max_projects = $_SESSION['max_projects'];
+
 ?>
 
 <div class="container mt-5 all-images mx-auto">
