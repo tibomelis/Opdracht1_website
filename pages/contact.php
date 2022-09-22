@@ -7,8 +7,8 @@
 */
 session_start();
 $lang = (empty($_SESSION['lang']) ? 'nl' : $_SESSION['lang']);
-include "../src/variables/variables_$lang.php";
 $_SESSION['curpage'] = 'contact';
+include "../src/variables/variables_$lang.php";
 ?>
 <!DOCTYPE html>
 <html lang="nl">
