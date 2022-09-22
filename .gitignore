@@ -1,4 +1,5 @@
 # ignore these files:
+.gitignore
 /pages/sendmail/config.json
 /.idea
 /experiments
